@@ -7,6 +7,7 @@ var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
 var injectPartials = require('gulp-inject-partials');
 var webserver = require('gulp-webserver');
+var sass = require('gulp-sass');
 
 // Run webserver
 gulp.task('webserver', function() {
@@ -27,19 +28,16 @@ gulp.task('html', function () {
 
 // Compile css
 gulp.task('css', function () {
-    var postcss    = require('gulp-postcss');
-    var cssnext = require("postcss-cssnext");
-
-    return gulp.src('src/stylesheets/**/*.css')
-        .pipe( sourcemaps.init() )
-        .pipe(postcss([require('precss'), require('postcss-cssnext')]))
-        .pipe( sourcemaps.write('.') )
-        .pipe( gulp.dest('assets/stylesheets/') )
-        .pipe(notify({
-            title: "CSS compiled successfully",
-            message: "Jupi!",
-            onLast: true
-        }));
+  return gulp.src('src/stylesheets/styles.scss')
+    .pipe( sourcemaps.init() )
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe( sourcemaps.write('.') )
+    .pipe( gulp.dest('assets/stylesheets/') )
+    .pipe(notify({
+      title: "CSS compiled successfully",
+      message: "Jupi!",
+      onLast: true
+    }));
 });
 
 // Build scripts
@@ -58,7 +56,7 @@ gulp.task('scripts', function () {
 
 // Watch changes
 gulp.task('watch', function () {
-    gulp.watch('src/stylesheets/**/*.css', ['css']);
+    gulp.watch('src/stylesheets/**/*.scss', ['css']);
     gulp.watch('src/scripts/**/*.js', ['scripts']);
     gulp.watch('src/views/**/*.html', ['html']);
 

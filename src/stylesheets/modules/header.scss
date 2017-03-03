@@ -1,0 +1,51 @@
+.m-header {
+
+    padding: 48px 0;
+    background-color: $color-black;
+
+    &__title {
+        font-size: 3.4rem;
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 768px;
+        margin: 5px auto;
+    }
+
+    &__search {
+        width: 468px;
+        margin: 40px auto 0;
+        border-radius: 3px;
+        overflow: hidden;
+
+        &-keyword {
+            background-color: $color-white;
+            border: none;
+            width: 366px;
+            height: 38px;
+            padding: 8px 12px;
+            display: block;
+            float: left;
+            outline: none;
+        }
+
+        &-submit {
+            background-color: $color-white;
+            border: none;
+            border-left: 1px solid $color-black;
+            width: 102px;
+            height: 38px;
+            display: block;
+            float: left;
+            transition: all .2s;
+            outline: none;
+
+            &:focus,
+            &:hover {
+                background-color: lighten($color-black, 20%);
+                color: $color-white;
+            }
+        }
+    }
+
+}

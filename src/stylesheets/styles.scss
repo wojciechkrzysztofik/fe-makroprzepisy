@@ -1,0 +1,20 @@
+/*
+ * STYLES
+ */
+
+ // VENDORS
+ @import 'vendors/bootstrap';
+
+// SHARED
+@import 'shared/variables';
+@import 'shared/global';
+@import 'shared/utilities';
+
+// COMPONENTS
+
+// MODULES
+@import 'modules/navbar';
+@import 'modules/header';
+@import 'modules/footer';
+
+// PAGES

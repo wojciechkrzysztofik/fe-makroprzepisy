@@ -2,7 +2,7 @@
 ***
 
 #### Description:
--- PostCSS (with CSSNext)
+-- SCSS  
 -- Bootstrap
 
 ***
