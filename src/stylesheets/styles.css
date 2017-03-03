@@ -1,0 +1,10 @@
+@import 'variables.css';
+
+body {
+  font-family: Helvetica, Arial;
+
+  .intro {
+    background: green;
+    padding: 10px;
+  }
+}
