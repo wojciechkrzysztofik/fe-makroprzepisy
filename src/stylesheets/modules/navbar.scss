@@ -1,10 +1,105 @@
 .m-navbar {
+    .brand {
+        margin-top: 6px;
+        padding-right: 10px;
+        float: left;
 
-    &__menu {
-        li {
+        &__link {
+            display: inline-block;
+        }
+
+        &__image {
+            display: inline-block;
+        }
+    }
+
+    .search {
+        float: left;
+        padding: 17px 10px;
+        border-left: 1px solid $color-cool-gray;
+
+        &__form {
+            position: relative;
+        }
+
+        &__submit {
+            background: transparent;
+            border: none;
+            position: absolute;
+            top: -6px;
+            left: 0;
+            font-size: 1.4rem;
+        }
+
+        &__input {
+            border: none;
+            padding-left: 40px;
+            font-size: .8rem;
+            outline: none;
+            width: 150px;
+
+            @media(min-width: $screen-sm) {
+                width: 300px;
+            }
+        }
+    }
+
+    .menu {
+        padding: 12px 0;
+
+        &__list {
+            margin: 0;
+        }
+
+        &__item {
             display: inline-block;
             margin: 0 22px;
         }
     }
 
+    .account {
+        padding: 6px 0;
+
+        &__notifications-link {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: $color-pale-gray;
+            float: left;
+            margin-right: 20px;
+
+            .icon-heart {
+                font-size: 1.6rem;
+                display: inline-block;
+                margin-top: 4px;
+                margin-left: -2px;
+            }
+        }
+
+        &__notifications-count {
+            width: 18px;
+            height: 18px;
+            background: $color-black;
+            border-radius: 50%;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            font-size: .7rem;
+            color: $color-white;
+            text-align: center;
+        }
+
+        &__profile-link {
+            display: inline-block;
+        }
+
+        &__profile-image {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
 }

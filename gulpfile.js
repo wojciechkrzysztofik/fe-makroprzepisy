@@ -8,6 +8,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var injectPartials = require('gulp-inject-partials');
 var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
+var gulpCopy = require('gulp-copy');
+var clean = require('gulp-clean');
 
 // Run webserver
 gulp.task('webserver', function() {
@@ -52,6 +54,17 @@ gulp.task('scripts', function () {
           message: "Jupi!",
           onLast: true
       }));
+});
+
+gulp.task('clean', function () {
+    return gulp.src('assets/fonts', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('build', function () {
+    return gulp
+        .src('src/fonts/**/*')
+        .pipe(gulp.dest('assets/fonts'));
 });
 
 // Watch changes

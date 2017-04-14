@@ -1,17 +1,40 @@
 <nav class="m-navbar">
     <div class="container">
         <div class="pull-left">
-            <a href="" class="m-navbar__brand" title="">Navbar</a>
+            <div class="m-navbar__brand brand ">
+                <a href="" class="brand__link" title="">
+                    <img class="brand__image" src="assets/images/logo/logo-symbol-black.svg" alt="Makro Składniki - logo">
+                </a>
+            </div>
+            <div class="m-navbar__search search">
+                <form class="search__form" action="" method="get">
+                    <fieldset>
+                        <button class="search__submit" type="button"><i class="icon icon-search"></i></button>
+                        <input class="search__input" type="text" name="keyword" placeholder="Szukaj">
+                    </fieldset>
+                </form>
+            </div>
         </div>
-        <div class="m-navbar__menu pull-right">
-            <ul>
-                <li>
+        <!--
+        <div class="m-navbar__menu menu pull-right">
+            <ul class="menu__list">
+                <li class="menu__item">
                     <a href="" title="">Zarejestruj</a>
                 </li>
-                <li>
+                <li class="menu__item">
                     <a href="" title="">Zaloguj</a>
                 </li>
             </ul>
+        </div>
+        -->
+        <div class="m-navbar__account account pull-right">
+            <a class="account__notifications-link" href="" title="Sprawdź powiadomienia">
+                <i class="icon icon-heart"></i>
+                <span class="account__notifications-count">12</span>
+            </a>
+            <a class="account__profile-link" href="" title="Przejdź do profilu użytkownika">
+                <img class="account__profile-image" src="assets/images/tmp/avatar-xs.jpg" alt="Jan Kowalski - avatar">
+            </a>
         </div>
     </div>
 </nav>

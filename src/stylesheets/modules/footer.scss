@@ -2,6 +2,19 @@
 
     &__group-title {
         font-size: 1rem;
+        font-family: mulibold;
+    }
+
+    .list {
+        &__item {
+            line-height: 30px;
+        }
+
+        &--copyright {
+            .list__item {
+                line-height: 22px;
+            }
+        }
     }
 
 }
