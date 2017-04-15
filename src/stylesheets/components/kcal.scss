@@ -1,0 +1,22 @@
+.kcal {
+    overflow: hidden;
+
+    &__icon {
+        font-size: .55rem;
+        border: 2px solid $color-black;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        line-height: 22px;
+        text-align: center;
+        display: block;
+        float: left;
+    }
+
+    &__number {
+        display: block;
+        float: left;
+        margin: -2px 0 0 5px;
+        line-height: 2;
+    }
+}

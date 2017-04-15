@@ -5,6 +5,7 @@
     width: 100%;
     height: 52px;
     transition: height .3s;
+    border-bottom: 1px solid $color-cool-gray;
 
     @media(min-width: $screen-sm) {
         height: auto;

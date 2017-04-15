@@ -1,0 +1,82 @@
+.title-bar {
+    display: none;
+
+    @media(min-width: $screen-sm) {
+        position: fixed;
+        top: -80px;
+        left: 0;
+        background: $color-black;
+        z-index: 2;
+        width: 100%;
+        color: $color-white;
+        transition: top .2s;
+        display: block;
+    }
+
+    &.visible {
+        top: 0;
+    }
+
+    &__title {
+        font-family: mulisemibold;
+        line-height: 4.5;
+        margin: 0 0 0 35px;
+        text-transform: uppercase;
+    }
+
+    &__macro {
+        background: transparent !important;
+
+        @media(max-width: $screen-sm-max) {
+            margin: 0 !important;
+        }
+
+        @media(min-width: $screen-md) {
+            margin: 6px 0 !important;
+        }
+
+        .macro__col {
+            border: none !important;
+
+            @media(max-width: $screen-sm-max) {
+                padding-left: 10px !important;
+            }
+        }
+
+        .macro__icon {
+            @media(max-width: $screen-sm-max) {
+                display: none !important;
+            }
+        }
+
+        .macro__label {
+            @media(max-width: $screen-sm-max) {
+                strong {
+                    display: block !important;
+                }
+            }
+        }
+
+        .kcal {
+            .kcal__icon {
+                border-color: $color-white;
+                @media(max-width: $screen-sm-max) {
+                    position: absolute;
+                    top: -19px;
+                    left: 0;
+                    border: none;
+                    font-size: 1rem;
+                }
+            }
+
+            .kcal__number {
+                @media(max-width: $screen-sm-max) {
+                    position: absolute;
+                    top: -38px;
+                    left: -5px;
+                    font-family: mulibold;
+                }
+            }
+        }
+    }
+}

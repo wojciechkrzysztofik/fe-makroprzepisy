@@ -35,22 +35,8 @@
             overflow: hidden;
         }
 
-        &__kcal {
-            font-size: .55rem;
-            border: 2px solid $color-black;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            padding-top: 3px;
-            text-align: center;
-            display: block;
-            float: left;
-        }
-
-        &__kcal-number {
-            display: block;
-            float: left;
-            margin: -2px 0 0 5px;
+        .kcal {
+            overflow: hidden;
         }
 
         .overlay {

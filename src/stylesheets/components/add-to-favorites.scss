@@ -1,0 +1,24 @@
+.add-to-favorites {
+    background: transparent;
+    border: none;
+
+    &__icon {
+        font-size: 1.5rem;
+        display: block;
+        float: left;
+    }
+
+    &__label {
+        margin: 2px 0 0 5px;
+        display: block;
+        float: left;
+    }
+
+    &.checked,
+    &:focus,
+    &:hover {
+        .add-to-favorites__icon {
+            color: $color-cool-gray;
+        }
+    }
+}

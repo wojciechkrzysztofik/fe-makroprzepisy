@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Makro Przepisy - Recipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" media="all" type="text/css" href="assets/stylesheets/styles.css">
+  </head>
+  <body>
+    <!-- partial:modules/_navbar.html --><nav class="m-navbar">
+    <div class="container">
+        <div>
+            <div class="m-navbar__brand brand ">
+                <a href="" class="brand__link" title="">
+                    <img class="brand__image" src="assets/images/logo/logo-symbol-black.svg" alt="Makro Składniki - logo">
+                </a>
+                <button class="m-navbar__toggle-menu toggle-menu collapsed"><span class="sr-only">Menu</span></button>
+            </div>
+            <!--
+            <div class="m-navbar__search search">
+                <form class="search__form" action="" method="get">
+                    <fieldset>
+                        <button class="search__submit" type="button"><i class="icon icon-search"></i></button>
+                        <input class="search__input" type="text" name="keyword" placeholder="Szukaj">
+                    </fieldset>
+                </form>
+            </div>
+            -->
+        </div>
+
+        <div class="m-navbar__menu menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="" title="">Zarejestruj</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" title="">Zaloguj</a>
+                </li>
+            </ul>
+        </div>
+        <!--
+        <div class="m-navbar__account account pull-right">
+            <a class="account__notifications-link" href="" title="Sprawdź powiadomienia">
+                <i class="icon icon-heart"></i>
+                <span class="account__notifications-count">12</span>
+            </a>
+            <a class="account__profile-link" href="" title="Przejdź do profilu użytkownika">
+                <img class="account__profile-image" src="assets/images/tmp/avatar-xs.jpg" alt="Jan Kowalski - avatar">
+            </a>
+        </div>
+        -->
+    </div>
+</nav>
+<!-- partial -->
+    <main>
+        <!-- partial:modules/_recipe.html --><article class="m-recipe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 add-to-favorites__wrapper">
+                <button type="button" class="m-recipe__add-to-favorites add-to-favorites">
+                    <i class="icon icon-heart add-to-favorites__icon"></i>
+                    <span class="label add-to-favorites__label">Do do ulubionych!</span>
+                </button>
+            </div>
+            <div class="col-md-6 m-recipe__macro-wrapper">
+                <div class="recipe__macro macro">
+                    <div class="macro__col">
+                        <div class="kcal">
+                            <span class="kcal__icon">kcal</span>
+                            <span class="kcal__number">400</span>
+                        </div>
+                    </div>
+                    <div class="macro__col">
+                        <i class="icon icon-carbs macro__icon"></i>
+                        <span class="macro__label"><strong>20g</strong> węgli</span>
+                    </div>
+                    <div class="macro__col">
+                        <i class="icon icon-lifting macro__icon"></i>
+                        <span class="macro__label"><strong>52g</strong> białka</span>
+                    </div>
+                    <div class="macro__col">
+                        <i class="icon icon-fat macro__icon"></i>
+                        <span class="macro__label"><strong>4g</strong> tłuszczu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 m-recipe__content">
+                <h1 class="m-recipe__title">Burger z burakiem i karmelizowaną cebulą</h1>
+                <div class="m-recipe__portions portions">
+                    <button type="button" class="portions__btn-add"><i class="icon icon-plus"></i></button>
+                    <span class="portions__count">
+                        <span class="portions__value">2</span> porcje
+                    </span>
+                    <button type="button" class="portions__btn-delete"><i class="icon icon-minus"></i></button>
+                </div>
+
+                <!-- SKŁADNIKI - GRUPA 1 -->
+                <section class="m-recipe__section">
+                    <h2 class="m-recipe__subtitle">Składniki na ciasto</h2>
+                    <dl class="m-recipe__list list">
+                        <div class="list__item">
+                            <dt class="list__term">12 kcal</dt>
+                            <dd class="list__description">1/2 paczki mrożonego szpinaku (lepszy jest ten w bryłkach)</dd>
+                        </div>
+                        <div class="list__item">
+                            <dt class="list__term">120 kcal</dt>
+                            <dd class="list__description">4-6 łyżek mąki kokosowej</dd>
+                        </div>
+                        <div class="list__item">
+                            <dt class="list__term">50 kcal</dt>
+                            <dd class="list__description">1/2 łyżeczki sody oczyszczonej</dd>
+                        </div>
+                        <div class="list__item">
+                            <dt class="list__term">120 kcal</dt>
+                            <dd class="list__description">4-6 łyżek mąki kokosowej</dd>
+                        </div>
+                        <div class="list__item">
+                            <dt class="list__term">50 kcal</dt>
+                            <dd class="list__description">1/2 łyżeczki sody oczyszczonej</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <!-- SKŁADNIKI - GRUPA 2 -->
+                <section class="m-recipe__section">
+                    <h2 class="m-recipe__subtitle">Skłądniki na ciasto</h2>
+                    <dl class="m-recipe__list list">
+                        <div class="list__item">
+                            <dt class="list__term">12 kcal</dt>
+                            <dd class="list__description">185ml wody</dd>
+                        </div>
+                        <div class="list__item">
+                            <dt class="list__term">120 kcal</dt>
+                            <dd class="list__description">185ml wody</dd>
+                        </div>
+                        <div class="list__item">
+                            <dt class="list__term">50 kcal</dt>
+                            <dd class="list__description">185ml wody</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="m-recipe__section u-spacing-top-lg">
+                    <ol class="m-recipe__steps steps">
+                        <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                        <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                        <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                        <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                    </ol>
+                </section>
+
+                <section class="m-recipe__section">
+                    <ul class="m-recipe__tags">
+                        <li class="tag">
+                            <a class="tag__link" href="">Deser</a>
+                        </li>
+                        <li class="tag">
+                            <a class="tag__link"href="">Dania główne</a>
+                        </li>
+                        <li class="tag">
+                            <a class="tag__link" href="">Pizza</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="col-sm-6">
+                <section>
+                    <ul class="m-recipe__photos photos">
+                        <li class="photos__item">
+                            <a href="" class="photos__link">
+                                <img class="photos__image" src="assets/images/tmp/recipe-1.jpg" alt="Zdjęcje nr 1">
+                            </a>
+                        </li>
+                        <li class="photos__item">
+                            <a href="" class="photos__link">
+                                <img class="photos__image" src="assets/images/tmp/recipe-2.jpg" alt="Zdjęcje nr 2">
+                            </a>
+                        </li>
+                        <li class="photos__item">
+                            <a href="" class="photos__link">
+                                <img class="photos__image" src="assets/images/tmp/recipe-3.jpg" alt="Zdjęcje nr 3">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-recipe__title-bar title-bar">
+        <div class="row">
+            <div class="col-sm-7 col-md-5">
+                <p class="title-bar__title">Burger z burakiem i karmelizowaną cebulą</p>
+            </div>
+            <div class="col-sm-5 col-md-7">
+                <div class="title-bar__macro macro">
+                    <div class="macro__col">
+                        <div class="kcal">
+                            <span class="kcal__icon">kcal</span>
+                            <span class="kcal__number">400</span>
+                        </div>
+                    </div>
+                    <div class="macro__col">
+                        <i class="icon icon-carbs macro__icon"></i>
+                        <span class="macro__label"><strong>20g</strong> węgli</span>
+                    </div>
+                    <div class="macro__col">
+                        <i class="icon icon-lifting macro__icon"></i>
+                        <span class="macro__label"><strong>52g</strong> białka</span>
+                    </div>
+                    <div class="macro__col">
+                        <i class="icon icon-fat macro__icon"></i>
+                        <span class="macro__label"><strong>4g</strong> tłuszczu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+    </main>
+    <!-- partial:modules/_footer.html --><footer class="m-footer">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h3 class="m-footer__group-title">Przepisy</h3>
+                <ul class="m-footer__list">
+                    <li class="list__item"><a href="" title="">Wszystkie</a></li>
+                    <li class="list__item"><a href="" title="">Top10</a></li>
+                    <li class="list__item"><a href="" title="">Filmy</a></li>
+                </ul>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h3 class="m-footer__group-title">Moja przestrzeń</h3>
+                <ul class="m-footer__list list">
+                    <li class="list__item"><a href="" title="">Dodaj przepis</a></li>
+                    <li class="list__item"><a href="" title="">Zarejestruj</a></li>
+                    <li class="list__item"><a href="" title="">Zaloguj</a></li>
+                </ul>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h3 class="m-footer__group-title">Makro przepisy</h3>
+                <ul class="m-footer__list list">
+                    <li class="list__item"><a href="" title="">Kontakt</a></li>
+                    <li class="list__item"><a href="" title="">Regulamin i polityka prywatności</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-4">
+                <h3 class="m-footer__group-title">Makro Przepisy</h3>
+                <ul class="m-footer__list list list--copyright">
+                    <li class="list__item">&copy; Copyright 2017</li>
+                    <li class="list__item"><a href="" title="">www.makroprzepisy.pl</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- partial -->
+    <script src="assets/scripts/bundle.js"></scripts>
+  </body>
+</html>

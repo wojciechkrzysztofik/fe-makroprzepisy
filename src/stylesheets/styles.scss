@@ -13,12 +13,17 @@
 @import 'shared/icons';
 
 // COMPONENTS
+@import 'components/tag';
+@import 'components/kcal';
+@import 'components/add-to-favorites';
+@import 'components/title-bar';
 
 // MODULES
 @import 'modules/navbar';
 @import 'modules/header';
 @import 'modules/tags';
 @import 'modules/recipes';
+@import 'modules/recipe';
 @import 'modules/footer';
 
 // PAGES

@@ -25,7 +25,7 @@ gulp.task('webserver', function() {
 
 // inject HTML partials
 gulp.task('html', function () {
-  return gulp.src('./src/views/index.html')
+  return gulp.src('./src/views/*.html')
            .pipe(injectPartials())
            .pipe(gulp.dest('./'));
 });
