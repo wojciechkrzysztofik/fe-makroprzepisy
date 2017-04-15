@@ -10,6 +10,7 @@ var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
 var gulpCopy = require('gulp-copy');
 var clean = require('gulp-clean');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Run webserver
 gulp.task('webserver', function() {
@@ -17,6 +18,7 @@ gulp.task('webserver', function() {
     .pipe(webserver({
       port: '8000',
       livereload: true,
+      directoryListing: true,
       open: true
     }));
 });
@@ -33,6 +35,10 @@ gulp.task('css', function () {
   return gulp.src('src/stylesheets/styles.scss')
     .pipe( sourcemaps.init() )
     .pipe(sass.sync().on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
     .pipe( sourcemaps.write('.') )
     .pipe( gulp.dest('assets/stylesheets/') )
     .pipe(notify({

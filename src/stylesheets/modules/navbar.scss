@@ -1,8 +1,33 @@
 .m-navbar {
+    position: fixed;
+    z-index: 2;
+    background: $color-white;
+    width: 100%;
+    height: 52px;
+    transition: height .3s;
+
+    @media(min-width: $screen-sm) {
+        height: auto;
+    }
+
+    &.open {
+        height: 100%;
+
+        .menu {
+            display: block;
+        }
+    }
+
     .brand {
         margin-top: 6px;
         padding-right: 10px;
-        float: left;
+        position: relative;
+        width: 100%;
+
+        @media(min-width: $screen-sm) {
+            float: left;
+            width: auto;
+        }
 
         &__link {
             display: inline-block;
@@ -10,6 +35,32 @@
 
         &__image {
             display: inline-block;
+        }
+    }
+
+    .toggle-menu {
+        background: transparent;
+        border: none;
+        outline: none;
+
+        &::before {
+            font-family: 'makro-icons';
+            content: '\e932';
+            font-size: 1.6rem;
+            position: absolute;
+            top: 6px;
+            left: 35px;
+            transition: transform .2s;
+        }
+
+        &.collapsed {
+            &::before {
+                transform: rotate(-180deg);
+            }
+        }
+
+        @media(min-width: $screen-sm) {
+            display: none;
         }
     }
 
@@ -46,19 +97,30 @@
 
     .menu {
         padding: 12px 0;
+        display: none;
+
+        @media(min-width: $screen-sm) {
+            float: right;
+            display: block;
+        }
 
         &__list {
             margin: 0;
         }
 
         &__item {
-            display: inline-block;
-            margin: 0 22px;
+            display: block;
+            margin: 10px;
+
+            @media(min-width: $screen-sm) {
+                display: inline-block;
+                margin: 0 22px;
+            }
         }
     }
 
     .account {
-        padding: 6px 0;
+        padding: 6px 0 0;
 
         &__notifications-link {
             position: relative;
@@ -93,13 +155,22 @@
 
         &__profile-link {
             display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            &:focus,
+            &:hover {
+                .account__profile-image {
+                    transform: scale(1.2);
+                }
+            }
         }
 
         &__profile-image {
             display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            transition: all .1s;
         }
     }
 }

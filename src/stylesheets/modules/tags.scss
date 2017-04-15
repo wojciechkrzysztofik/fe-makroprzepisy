@@ -1,0 +1,32 @@
+.m-tags {
+    padding: 20px 0;
+
+    @media(min-width: $screen-md) {
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .tag {
+        margin: 0 3px 8px;
+        display: inline-block;
+
+        &__link {
+            text-transform: lowercase;
+            font-size: .9rem;
+            font-family: mulisemibold;
+            padding: 2px 15px 4px;
+            border: 1px solid $color-black;
+            border-radius: 4px;
+            transition: all .2s;
+
+            &:focus,
+            &:hover {
+                background: $color-pale-gray;
+                border: 1px solid $color-pale-gray;
+                text-decoration: none;
+                color: $color-black;
+            }
+        }
+    }
+
+}
