@@ -1,0 +1,39 @@
+.steps {
+    counter-reset: counter;
+    padding: 0;
+
+    &__item {
+        position: relative;
+        border: none;
+        margin: 0 0 25px 0;
+
+        @media(min-width: $screen-sm) {
+            border-left: 1px solid $color-cool-gray;
+            margin: 0 0 25px 30px;
+            padding-left: 10px;
+        }
+
+        &::before {
+            content: counter(counter);
+            counter-increment: counter;
+            font-family: mulibold;
+            font-size: 1.4rem;
+            line-height: 1;
+            display: block;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $color-cool-gray;
+            width: 62px;
+
+            @media(min-width: $screen-sm) {
+                position: absolute;
+                top: 0;
+                left: -30px;
+                margin: 0;
+                padding: 0;
+                width: auto;
+                border-bottom: none;
+            }
+        }
+    }
+}

@@ -1,7 +1,8 @@
-var foo = 'bar';
+"use strict";
 
-console.log(foo);
+// init navigation
+navigationSetup('.m-navbar', '.m-navbar__toggle-menu', '.menu__list--dropdown', '.menu__item--dropdown');
 
-navigationSetup('.m-navbar', '.m-navbar__toggle-menu');
 
+// init recipe responsive actions
 recipeSetup();

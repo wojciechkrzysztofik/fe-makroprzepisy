@@ -1,0 +1,28 @@
+.portions {
+    @media(min-width: $screen-md) {
+        margin-top: 40px;
+    }
+
+    &__count {
+        margin: 0 10px;
+    }
+
+    &__btn-add,
+    &__btn-delete {
+        background: transparent;
+        border: 1px solid $color-cool-gray;
+        width: 30px;
+        height: 30px;
+
+        &:focus,
+        &:hover {
+            background: $color-pale-gray;
+            border: 1px solid $color-pale-gray;
+        }
+
+        .icon {
+            display: block;
+            padding-top: 2px;
+        }
+    }
+}

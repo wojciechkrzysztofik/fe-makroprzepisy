@@ -1,6 +1,9 @@
-"use script";
+"use strict";
 
 const recipeSetup = function() {
+
+    // main recipe container
+    let recipe = document.querySelector('.m-recipe');
     // elements
     let favoritesContainer = document.querySelector('.add-to-favorites__wrapper');
     let contentContainer = document.querySelector('.m-recipe__content');
@@ -12,16 +15,17 @@ const recipeSetup = function() {
 
     let init = function() {
 
-        window.addEventListener('resize', checkWindowSize);
-        window.addEventListener('scroll', checkScrollPosition);
+        if(recipe != null) {
+            window.addEventListener('resize', checkWindowSize);
+            window.addEventListener('scroll', checkScrollPosition);
 
-        checkWindowSize();
+            checkWindowSize();
+        }
     }
 
     let checkWindowSize = function() {
         let screenWidth = window.innerWidth;
 
-        console.log(screenWidth);
         if(screenWidth >= 992) {
             contentContainer.insertBefore(title, contentContainer.firstChild);
         }
@@ -37,7 +41,7 @@ const recipeSetup = function() {
     }
 
     let checkScrollPosition = function() {
-        let = scrollPos = window.scrollY;
+        let scrollPos = window.scrollY;
 
         if(scrollPos > 200) {
             titleBar.classList.add('visible');

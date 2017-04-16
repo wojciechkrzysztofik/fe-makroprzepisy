@@ -1,5 +1,9 @@
 .m-recipe {
-    padding: 100px 0 80px;
+    padding: 80px 0;
+
+    @media(min-width: $screen-sm) {
+        padding: 100px 0 80px;
+    }
 
     &__title {
         font-family: mulisemibold;
@@ -17,35 +21,6 @@
     &__subtitle {
         font-family: mulisemibold;
         font-size: 1.4rem;
-    }
-
-    .portions {
-        @media(min-width: $screen-md) {
-            margin-top: 40px;
-        }
-
-        &__count {
-            margin: 0 10px;
-        }
-
-        &__btn-add,
-        &__btn-delete {
-            background: transparent;
-            border: 1px solid $color-cool-gray;
-            width: 30px;
-            height: 30px;
-
-            &:focus,
-            &:hover {
-                background: $color-pale-gray;
-                border: 1px solid $color-pale-gray;
-            }
-
-            .icon {
-                display: block;
-                padding-top: 2px;
-            }
-        }
     }
 
     &__section {
@@ -78,46 +53,6 @@
 
             @media(min-width: $screen-md) {
                 width: 88%;
-            }
-        }
-    }
-
-    .steps {
-        counter-reset: counter;
-        padding: 0;
-
-        &__item {
-            position: relative;
-            border: none;
-            margin: 0 0 25px 0;
-
-            @media(min-width: $screen-sm) {
-                border-left: 1px solid $color-cool-gray;
-                margin: 0 0 25px 30px;
-                padding-left: 10px;
-            }
-
-            &::before {
-                content: counter(counter);
-                counter-increment: counter;
-                font-family: mulibold;
-                font-size: 1.4rem;
-                line-height: 1;
-                display: block;
-                margin-bottom: 15px;
-                padding-bottom: 15px;
-                border-bottom: 1px solid $color-cool-gray;
-                width: 62px;
-
-                @media(min-width: $screen-sm) {
-                    position: absolute;
-                    top: 0;
-                    left: -30px;
-                    margin: 0;
-                    padding: 0;
-                    width: auto;
-                    border-bottom: none;
-                }
             }
         }
     }
@@ -211,7 +146,7 @@
             margin-right: 4px;
             display: none;
 
-            @media(min-width: $screen-sm) {
+            @media(min-width: $screen-lg) {
                 display: block;
             }
         }

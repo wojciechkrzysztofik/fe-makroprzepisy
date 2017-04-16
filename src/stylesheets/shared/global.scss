@@ -16,10 +16,15 @@ a {
     text-decoration: none;
     line-height: 2;
     transition: color 2s;
+    outline: none;
 
     &:focus,
     &:hover {
         text-decoration: underline;
         color: lighten($color-black, 40%);
     }
+}
+
+button {
+    outline: none;
 }

@@ -1,0 +1,36 @@
+<div class="m-popup m-register visible">
+    <button type="button" class="m-popup__close">Zamknij</button>
+
+    <h1 class="m-popup__header">
+        <img class="m-popup__logo" src="assets/images/logo/logo-symbol-black.svg" alt="Makro Składniki - logo">
+    </h1>
+
+    <button type="button" class="m-popup__sm-btn m-popup__sm-btn--fb">Zarejestruj się z: Facebook</button>
+    <button type="button" class="m-popup__sm-btn m-popup__sm-btn--google">Zarejestruj się z: Google</button>
+
+    <p class="m-popup__text">Lub wypełnij formularz</p>
+
+    <form class="m-register__form form" action="" method="post">
+        <div class="form__input-wrapper form__input-wrapper--email">
+            <input class="form__input" type="email" name="email" placeholder="Adres e-mail">
+        </div>
+        <div class="form__input-wrapper form__input-wrapper--username">
+            <input class="form__input" type="text" name="username" placeholder="Nazwa użytkownika">
+        </div>
+        <div class="form__input-wrapper form__input-wrapper--password">
+            <input class="form__input" type="password" name="password" placeholder="Hasło">
+        </div>
+        <div class="form__input-wrapper form__input-wrapper--password">
+            <input class="form__input" type="password" name="repeat_password" placeholder="Powtórz hasło">
+        </div>
+
+        <button type="button" class="m-register__submit">Zarejestruj się</button>
+    </form>
+
+    <footer class="m-popup__footer footer">
+        <div class="row">
+            <div class="col-xs-6"><span class="footer__text">Masz już konto?</span></div>
+            <div class="col-xs-6"><button type="button" class="m-register__log-in">Zaloguj się</button></div>
+        </div>
+    </footer>
+</div>

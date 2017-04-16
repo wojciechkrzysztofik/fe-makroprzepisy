@@ -1,0 +1,103 @@
+.m-register {
+
+    .form {
+        width: 80%;
+        margin: auto;
+
+        &__input-wrapper {
+            margin-bottom: 15px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 6px;
+                left: 15px;
+                font-size: 1.3rem;
+                font-family: 'makro-icons';
+            }
+
+            &--email {
+                &::before {
+                    content: "\e975";
+                }
+            }
+
+            &--username {
+                &::before {
+                    content: "\e9b9";
+                }
+            }
+
+            &--password {
+                &::before {
+                    content: "\e974";
+                }
+            }
+        }
+
+        &__input {
+            width: 100%;
+            border: 1px solid $color-cool-gray;
+            border-radius: 4px;
+            padding: 8px 12px 8px 45px;
+            color: $color-black;
+            outline: none;
+            transition: background .2s;
+
+            &:placeholder {
+                color: $color-cool-gray;
+            }
+
+            &:focus,
+            &:hover {
+                background: lighten($color-pale-gray, 5%);
+            }
+        }
+    }
+
+    &__submit {
+        background: $color-black;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        color: $color-white;
+        display: block;
+        padding: 8px 30px;
+        margin: 15px auto;
+        transition: all .2s;
+
+        &:focus,
+        &:hover {
+            background: $color-cool-gray;
+            border-color: $color-cool-gray;
+        }
+    }
+
+    .footer {
+        margin: 0 -15px;
+        border-top: 1px solid $color-pale-gray;
+        padding: 20px 0 5px;
+
+        &__text {
+            font-family: mulisemibold;
+            margin-top: 6px;
+            float: right;
+        }
+    }
+
+    &__log-in {
+        background: transparent;
+        border: 1px solid $color-black;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        padding: 6px 20px;
+        transition: all .2s;
+
+        &:focus,
+        &:hover {
+            background: $color-pale-gray;
+            border: 1px solid $color-pale-gray;
+        }
+    }
+}
