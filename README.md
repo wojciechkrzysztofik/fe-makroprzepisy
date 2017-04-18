@@ -7,7 +7,7 @@
 
 #### How to start:
 -- npm install  
--- gulp
+-- gulp  
 -- go to: http://localhost:8080
 
 ***
