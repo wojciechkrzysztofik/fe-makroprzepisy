@@ -6,7 +6,6 @@ var concat = require('gulp-concat');
 var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
 var injectPartials = require('gulp-inject-partials');
-var webserver = require('gulp-webserver');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 var gulpCopy = require('gulp-copy');
@@ -16,26 +15,12 @@ var cleanCSS = require('gulp-clean-css');
 
 // Run webserver
 gulp.task('webserver', function() {
-  // gulp.src('dist')
-  //   .pipe(webserver({
-  //     port: '8000',
-  //     livereload: true,
-  //     directoryListing: true,
-  //     open: true,
-  //     path: './dist/index.html'
-  //   }))
 
   connect.server({
     livereload: true,
     root: ['.', '.tmp', 'dist']
   });
 });
-
-// gulp.task('livereload', function() {
-//   gulp.src(['.tmp/styles/*.css', '.tmp/scripts/*.js'])
-//     .pipe(watch())
-//     .pipe(connect.reload());
-// });
 
 // inject HTML partials
 gulp.task('html', function () {
@@ -112,5 +97,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function() {
-    gulp.start(['html', 'watch']);
+    gulp.start(['build', 'watch']);
 });
