@@ -6,4 +6,33 @@
         padding: 40px 0;
     }
 
+    &--left {
+        text-align: left;
+    }
+
+    .tag {
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &__link {
+            &--delete {
+                padding-right: 35px;
+                border-color: $color-cool-gray;
+
+                &::after {
+                    content: "\e9b4";
+                    font-family: 'makro-icons';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 5px 7px 0 6px;
+                    height: 100%;
+                    border-left: 1px solid $color-cool-gray;;
+                }
+            }
+        }
+    }
 }

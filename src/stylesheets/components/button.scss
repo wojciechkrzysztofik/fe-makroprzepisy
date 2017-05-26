@@ -1,0 +1,22 @@
+.btn {
+    text-transform: lowercase;
+    font-size: .9rem;
+    font-family: mulisemibold;
+    padding: 3px 15px 5px;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    transition: all .2s;
+
+    &:focus,
+    &:hover {
+        background: $color-pale-gray;
+        border: 1px solid $color-pale-gray;
+        text-decoration: none;
+        color: $color-black;
+    }
+
+    &--inverse {
+        background: $color-black;
+        color: $color-white;
+    }
+}

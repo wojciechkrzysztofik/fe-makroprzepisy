@@ -15,10 +15,12 @@
 // COMPONENTS
 @import 'components/tag';
 @import 'components/kcal';
+@import 'components/button';
 @import 'components/add-to-favorites';
 @import 'components/title-bar';
 @import 'components/portions';
 @import 'components/steps';
+@import 'components/forms';
 
 // MODULES
 @import 'modules/navbar';
@@ -26,6 +28,7 @@
 @import 'modules/tags';
 @import 'modules/recipes';
 @import 'modules/recipe';
+@import 'modules/add-recipe';
 @import 'modules/popup';
 @import 'modules/register';
 @import 'modules/footer';

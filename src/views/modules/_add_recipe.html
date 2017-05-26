@@ -1,0 +1,261 @@
+<article class="m-add-recipe">
+    <div class="m-add-recipe__top-bar top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4 class="top-bar__title">Dodawanie przepisu</h4>
+                    <a href="" class="btn-return top-bar__btn-return">Wróć do moich przepisów</a>
+                </div>
+                <div class="col-sm-6 pull-right">
+                    <ul class="top-bar__nav-buttons">
+                        <li class="top-bar__nav-buttons-item">
+                            <a href="" class="btn">Podgląd</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item">
+                            <a href="" class="btn">Zapisz draft</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item">
+                            <a href="" class="btn btn--inverse">Zapisz i publikuj</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-add-recipe__content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="m-add-recipe__photos photos">
+                        <!-- ADD FIRST PHOTO -->
+                        <!-- Po załadowaniu fotki dodaj sobie klasę first-photo--uploaded do first-photo, ona usunie bordera i ukryje forma. -->
+                        <div class="first-photo__wrapper">
+                            <div class="first-photo first-photo--uploaded" style="background-image: url('images/tmp/recipe-1.jpg')">
+                                <form class="first-photo__form">
+                                    <input class="first-photo__input" id="first-photo" type="file" name="photo" />
+                                    <label for="first-photo" class="first-photo__label"><i class="icon icon-camera"></i>Dodaj główne<br>zdjęcie potrawy</label>
+                                </form>
+                            </div>
+                            <div class="photos__filename">Photo_main.jpg</div>
+                            <a class="photos__btn-delete" href="">Usuń</a>
+                        </div>
+
+                        <ul class="photos__list">
+                            <!-- NEXT PHOTO -->
+                            <li class="photo">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <a href="" class="photo__link">
+                                            <div class="photo__wrapper">
+                                                <img class="photo__image" src="images/tmp/recipe-2.jpg">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 photo__actions">
+                                        <div class="photos__filename">Photo2.jpg</div>
+                                        <a class="photos__btn-delete" href="">Usuń</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- NEXT PHOTO -->
+                            <li class="photo">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <a href="" class="photo__link">
+                                            <div class="photo__wrapper">
+                                                <img class="photo__image" src="images/tmp/recipe-3.jpg">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 photo__actions">
+                                        <div class="photos__filename">Photo3.jpg</div>
+                                        <a class="photos__btn-delete" href="">Usuń</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <form class="more-photos">
+                            <div class="more-photos__wrapper">
+                                <!-- ważne jest tutaj żeby wartość dla for z labela była zgodna z id inputa -->
+                                <input class="more-photos__input" id="more-photos" type="file" name="photo" />
+                                <label for="more-photos" class="more-photos__label">Dodaj kolejne zdjęcia</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <form class="new-recipe">
+                        <fieldset>
+                            <label for="name">Nazwa potrawy</label>
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <input type="text" id="name" name="name" placeholder="np. Wegański burger" />
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="portions">
+                                        <button type="button" class="portions__btn-add"><i class="icon icon-plus"></i></button>
+                                        <span class="portions__count">
+                                            <span class="portions__value">2</span> porcje
+                                        </span>
+                                        <button type="button" class="portions__btn-delete"><i class="icon icon-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Składniki</legend>
+
+                            <div class="ingridients-header">
+                                <div class="col name-header">
+                                    Nazwa
+                                </div>
+                                <div class="col amount-header">
+                                    Ilość
+                                </div>
+                                <div class="col unit-header">
+                                    Jednostka
+                                </div>
+                                <div class="col group-header">
+                                    Grupa składników
+                                </div>
+                            </div>
+
+                            <ul class="ingridients">
+                                <!-- INGRIDIENT -->
+                                <li class="igridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name">
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                    </div>
+                                    <div class="col col-amount">
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col-group">
+                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                    </div>
+                                    <div class="col col-order">
+                                        <span class="order">1</span>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                <li>
+
+                                <!-- INGRIDIENT -->
+                                <li class="igridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name">
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                    </div>
+                                    <div class="col col-amount">
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col-group">
+                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                    </div>
+                                    <div class="col col-order">
+                                        <span class="order">1</span>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                <li>
+
+                                <!-- INGRIDIENT -->
+                                <li class="igridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name">
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                    </div>
+                                    <div class="col col-amount">
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col-group">
+                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                    </div>
+                                    <div class="col col-order">
+                                        <span class="order">1</span>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                <li>
+                            </ul>
+
+                            <a href="" class="btn-add-new-ingrident">Dodaj kolejny składnik</a>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Przygotowanie</legend>
+
+                            <ul class="recipe">
+                                <li class="step">
+                                    <div class="col col-nr">
+                                        <div class="order-number">1</div>
+                                    </div>
+                                    <div class="col col-description">
+                                        <textarea placeholder="Opisz czynności"></textarea>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="" class="btn-add-new-ingrident">Dodaj kolejny krok</a>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Tagi</legend>
+
+                            <div class="tag-wrapper">
+                                <input type="text" class="new-tag" placeholder="Wpisz nazwę tagu" />
+                                <button class="add-tag"><i class="icon icon-plus"></i></button>
+                            </div>
+
+                            <div class="m-tags m-tags--left">
+                                <ul class="m-tags__list">
+                                    <li class="tag">
+                                        <a class="tag__link tag__link--delete" href="">Deser</a>
+                                    </li>
+                                    <li class="tag">
+                                        <a class="tag__link tag__link--delete"href="">Dania główne</a>
+                                    </li>
+                                    <li class="tag">
+                                        <a class="tag__link tag__link--delete" href="">Pizza</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
