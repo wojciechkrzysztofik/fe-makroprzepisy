@@ -39,6 +39,19 @@
             &-item {
                 display: inline-block;
             }
+
+            .btn-options {
+                padding: 3px 10px 5px 15px;
+
+                &::after {
+                    content: '\e932';
+                    font-family: 'makro-icons';
+                    font-size: .9rem;
+                    margin-left: 5px;
+                    transform: rotate(-180deg);
+                    display: inline-block;
+                }
+            }
         }
     }
 
@@ -58,6 +71,14 @@
 
         &--uploaded {
             border: none;
+            float: left;
+            margin: 0 10px 20px 0;
+
+            @media(min-width: $screen-xs) {
+                float: none;
+                margin: 0;
+            }
+
             .first-photo__form {
                 display: none;
             }
@@ -100,8 +121,13 @@
 
     .photos {
         &__filename {
-            font-weight: bold;
-            margin: 5px 0 0;
+            display: none;
+
+            @media(min-width: $screen-xs) {
+                display: block;
+                font-weight: bold;
+                margin: 5px 0 0;
+            }
         }
 
         &__btn-delete {
@@ -117,6 +143,14 @@
             &:hover {
                 text-decoration: none;
                 color: $color-cool-gray;
+            }
+
+            span {
+                display: none;
+
+                @media(min-width: $screen-xs) {
+                    display: inline;
+                }
             }
         }
 
@@ -205,7 +239,12 @@
     }
 
     .portions {
-        margin: 0;
+        margin: 20px 0 20px;
+        overflow: hidden;
+
+        @media(min-width: $screen-sm) {
+            margin: 0;
+        }
 
         &__btn-add,
         &__btn-delete {
@@ -223,23 +262,45 @@
         }
     }
 
+    .m-recipe__portions {
+        margin-top: 20px;
+    }
+
     fieldset {
         margin-top: 30px;
         margin-bottom: 20px;
 
         legend {
             font-weight: bold;
-            font-size: $font-size-xs;
+            font-size: $font-size-sm;
             border: none;
             margin-bottom: 10px;
+
+            @media(min-width: $screen-sm) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        label {
+            color: $color-cool-gray;
+            font-weight: normal;
+
+            @media(min-width: $screen-sm) {
+                display: none;
+            }
         }
     }
 
     .ingridients-header {
-        overflow: hidden;
-        border-bottom: 1px solid $color-pale-gray;
-        padding-bottom: 12px;
-        margin: 15px 0 5px 0;
+        display: none;
+
+        @media(min-width: $screen-sm) {
+            display: block;
+            overflow: hidden;
+            border-bottom: 1px solid $color-pale-gray;
+            padding-bottom: 12px;
+            margin: 15px 0 5px 0;
+        }
 
         .col {
             color: $color-cool-gray;
@@ -247,8 +308,16 @@
         }
 
         .name-header {
-            width: 395px;
             margin-left: 30px;
+            width: 25%;
+
+            @media(min-width: $screen-sm) and (max-width: $screen-md) {
+                width: 37%;
+            }
+
+            @media(min-width: 1200px) {
+                width: 395px;
+            }
         }
 
         .amount-header {
@@ -265,12 +334,147 @@
     }
 
     .ingridients {
-        .igridient {
-            overflow: hidden;
-            padding: 10px 0;
+        .ingridient {
+            clear: both;
+            min-height: 60px;
+            padding: 10px 0 30px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $color-pale-gray;
+
+            @media(min-width: $screen-sm) {
+                margin-bottom: 0;
+                padding: 10px 0;
+                border-bottom: none;
+            }
 
             &.ui-sortable-helper {
                 box-shadow: 0 0 15px 0 rgba(152, 152, 160, 0.5);
+            }
+
+            &__name,
+            &__group {
+                position: relative;
+            }
+
+            &__autocomplete {
+                position: absolute;
+                top: 68px;
+                background: $color-white;
+                border: 1px solid $color-cool-gray;
+                width: 100%;
+                z-index: 1;
+
+                @media(min-width: $screen-sm) {
+                    width: 435px;
+                    top: 39px;
+                }
+
+                &-list {
+                    padding: 0 26px;
+                    max-height: 160px;
+                    overflow: scroll;
+                }
+
+                &-item {
+                    line-height: 40px;
+                }
+
+                &-match {
+                    color: $color-black;
+                    font-weight: bold;
+                }
+
+                &-finding {
+                    text-decoration: none;
+                    color: $color-cool-gray;
+
+                    &:focus,
+                    &:hover {
+                        color: $color-black;
+                    }
+                }
+
+                &-btn-add {
+                    display: block;
+                    background: $color-black;
+                    color: $color-white;
+                    padding: 6px 0;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all .2s;
+
+                    span {
+                        position: relative;
+                        padding-left: 16px;
+
+                        &::before {
+                            content: "\e996";
+                            font-family: 'makro-icons';
+                            position: absolute;
+                            top: -5px;
+                            left: 0;
+                        }
+                    }
+
+                    &:focus,
+                    &:hover {
+                        background: $color-cool-gray;
+                    }
+                }
+
+                &-content {
+                    padding: 25px 13px;
+                }
+
+                .hidden {
+                    display: none;
+                }
+
+                &--group {
+                    width: 280px;
+                    top: 45px;
+                    left: -20px;
+
+                    &::before {
+                        content: '';
+                        height: 10px;
+                        width: 10px;
+                        background: $color-white;
+                        border-top: 1px solid $color-cool-gray;
+                        border-right: 1px solid $color-cool-gray;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: -6px;
+                        left: 25px;
+                        z-index: 2;
+                    }
+
+                    .ingridient__autocomplete-list {
+                        max-height: 160px;
+                        overflow: scroll;
+                        padding: 0;
+                        margin-top: 10px;
+                    }
+
+                    .ingridient__autocomplete-item {
+                        border-bottom: 1px solid $color-pale-gray;
+                        position: relative;
+                    }
+
+                    .ingridient__autocomplete-count {
+                        background: $color-pale-gray;
+                        color: $color-cool-gray;
+                        text-align: center;
+                        border-radius: 50%;
+                        width: 25px;
+                        height: 25px;
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 6px;
+                        line-height: 25px;
+                    }
+                }
             }
         }
 
@@ -282,8 +486,13 @@
         }
 
         .col-move {
-            width: 30px;
-            cursor: pointer;
+            display: none;
+
+            @media(min-width: $screen-sm) {
+                width: 30px;
+                cursor: pointer;
+                display: block;
+            }
 
             .icon {
                 margin: 13px 0 0 2px;
@@ -292,7 +501,21 @@
         }
 
         .col-name {
-            width: 395px;
+            width: 100%;
+            margin-bottom: 20px;
+
+            @media(min-width: 768px) {
+                margin-bottom: 20px;
+                width: 25%;
+            }
+
+            @media(min-width: $screen-sm) and (max-width: $screen-md) {
+                width: 37%;
+            }
+
+            @media(min-width: 1200px) {
+                width: 395px;
+            }
         }
 
         .col-amount {
@@ -304,7 +527,12 @@
 
         }
         .col-group {
-            width: 140px;
+            display: none;
+
+            @media(min-width: $screen-sm) {
+                width: 140px;
+                display: block;
+            }
 
             .btn-add-to-group {
                 margin-top: 6px;
@@ -325,7 +553,12 @@
         }
 
         .col-order {
-            width: 25px;
+            display: none;
+
+            @media(min-width: $screen-sm) {
+                width: 25px;
+                display: block;
+            }
 
             .order {
                 border-radius: 50%;
@@ -341,7 +574,12 @@
         }
 
         .col-remove {
-            width: 80px;
+            display: none;
+
+            @media(min-width: $screen-sm) {
+                width: 80px;
+                display: block;
+            }
 
             .btn-remove {
                 margin: 8px 10px 0 0;
@@ -363,9 +601,14 @@
     }
 
     .btn-add-new-ingrident {
-        padding: 6px 0 0 50px;
         display: block;
         position: relative;
+        text-align: center;
+
+        @media(min-width: $screen-sm) {
+            text-align: left;
+            padding: 15px 0 0 50px;
+        }
 
         &::before {
             content: "\e996";
@@ -379,15 +622,25 @@
             display: block;
             color: $color-white;
             font-size: 1.5rem;
-            position: absolute;
-            top: 0;
-            left: 0;
+            margin: 10px auto;
+
+            @media(min-width: $screen-sm) {
+                text-align: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
     }
 
     .recipe {
         .step {
             overflow: hidden;
+            margin-bottom: 20px;
+
+            @media(min-width: $screen-sm) {
+                margin-bottom: 0;
+            }
         }
 
         .col {
@@ -400,14 +653,35 @@
             .order-number {
                 font-size: $font-size-sm + 4;
                 font-weight: bold;
-                border-right: 1px solid $color-cool-gray;
-                height: 64px;
-                padding-right: 17px;
+                height: 34px;
+
+                @media(min-width: $screen-sm) {
+                    border-right: 1px solid $color-cool-gray;
+                    height: 64px;
+                    padding-right: 17px;
+                }
             }
         }
 
         .col-description {
-            width: 748px;
+            width: 100%;
+            margin-bottom: 40px;
+
+            @media(min-width: 768px) {
+                width: 86%;
+            }
+
+            @media(min-width: $screen-md) and (max-width: $screen-md-max) {
+                width: 83%;
+            }
+
+            @media(min-width: 1200px) {
+                //width: 395px;
+            }
+
+            @media(min-width: $screen-lg) {
+                width: 748px;
+            }
 
             textarea {
                 height: 120px;
@@ -415,7 +689,12 @@
         }
 
         .col-remove {
-            width: 69px;
+            display: none;
+
+            @media(min-width: $screen-sm) {
+                display: block;
+                width: 69px;
+            }
 
             .btn-remove {
                 margin: 0 10px 0 0;
@@ -432,8 +711,12 @@
     }
 
     .new-tag {
-        width: 550px;
+        width: 100%;
         margin-bottom: 10px;
+
+        @media(min-width: $screen-sm) {
+            width: 550px;
+        }
     }
 
     .m-tags {
@@ -441,8 +724,13 @@
     }
 
     .tag-wrapper {
+        width: 100%;
         position: relative;
         display: inline-block;
+
+        @media(min-width: $screen-sm) {
+            width: auto;
+        }
     }
 
     .add-tag {

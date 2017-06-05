@@ -1,0 +1,157 @@
+<article class="m-add-recipe">
+    <div class="m-add-recipe__top-bar top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4 class="top-bar__title">Dodawanie przepisu</h4>
+                    <a href="" class="btn-return top-bar__btn-return">Wróć do moich przepisów</a>
+                </div>
+                <div class="col-xs-6 pull-right">
+                    <ul class="top-bar__nav-buttons">
+                        <li class="top-bar__nav-buttons-item hidden-xs">
+                            <a href="" class="btn">Podgląd</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item hidden-xs">
+                            <a href="" class="btn">Zapisz draft</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item hidden-xs">
+                            <a href="" class="btn btn--inverse">Zapisz i publikuj</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item visible-xs">
+                            <a href="" class="btn btn-options">Options</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="m-recipe">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 add-to-favorites__wrapper">
+                    <button type="button" class="m-recipe__add-to-favorites add-to-favorites">
+                        <i class="icon icon-heart add-to-favorites__icon"></i>
+                        <span class="label add-to-favorites__label">Do do ulubionych!</span>
+                    </button>
+                    <!--
+                    // "checked" version:
+                    <button type="button" class="m-recipe__add-to-favorites add-to-favorites checked">
+                        <i class="icon icon-heart add-to-favorites__icon"></i>
+                        <span class="label add-to-favorites__label">W ulubionych!</span>
+                    </button>
+                    -->
+                </div>
+                <div class="col-md-6 m-recipe__macro-wrapper">
+                    <div class="recipe__macro macro">
+                        <!-- partial:_macro-bar.html -->MACRO BAR<!-- partial -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 m-recipe__content">
+                    <h1 class="m-recipe__title">Burger z burakiem i karmelizowaną cebulą</h1>
+                    <div class="m-recipe__portions portions">
+                        <button type="button" class="portions__btn-add"><i class="icon icon-plus"></i></button>
+                        <span class="portions__count">
+                            <span class="portions__value">2</span> porcje
+                        </span>
+                        <button type="button" class="portions__btn-delete"><i class="icon icon-minus"></i></button>
+                    </div>
+
+                    <!-- SKŁADNIKI - GRUPA 1 -->
+                    <section class="m-recipe__section">
+                        <h2 class="m-recipe__subtitle">Składniki na ciasto</h2>
+                        <dl class="m-recipe__list list">
+                            <div class="list__item">
+                                <dt class="list__term">12 kcal</dt>
+                                <dd class="list__description">1/2 paczki mrożonego szpinaku (lepszy jest ten w bryłkach)</dd>
+                            </div>
+                            <div class="list__item">
+                                <dt class="list__term">120 kcal</dt>
+                                <dd class="list__description">4-6 łyżek mąki kokosowej</dd>
+                            </div>
+                            <div class="list__item">
+                                <dt class="list__term">50 kcal</dt>
+                                <dd class="list__description">1/2 łyżeczki sody oczyszczonej</dd>
+                            </div>
+                            <div class="list__item">
+                                <dt class="list__term">120 kcal</dt>
+                                <dd class="list__description">4-6 łyżek mąki kokosowej</dd>
+                            </div>
+                            <div class="list__item">
+                                <dt class="list__term">50 kcal</dt>
+                                <dd class="list__description">1/2 łyżeczki sody oczyszczonej</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <!-- SKŁADNIKI - GRUPA 2 -->
+                    <section class="m-recipe__section">
+                        <h2 class="m-recipe__subtitle">Skłądniki na ciasto</h2>
+                        <dl class="m-recipe__list list">
+                            <div class="list__item">
+                                <dt class="list__term">12 kcal</dt>
+                                <dd class="list__description">185ml wody</dd>
+                            </div>
+                            <div class="list__item">
+                                <dt class="list__term">120 kcal</dt>
+                                <dd class="list__description">185ml wody</dd>
+                            </div>
+                            <div class="list__item">
+                                <dt class="list__term">50 kcal</dt>
+                                <dd class="list__description">185ml wody</dd>
+                            </div>
+                        </dl>
+                    </section>
+
+                    <section class="m-recipe__section u-spacing-top-lg">
+                        <ol class="m-recipe__steps steps">
+                            <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                            <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                            <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                            <li class="steps__item">To make the pancake batter, put the coconut into a blender and blitz for 1 minute or until it becomes finely chopped. Add the flour and baking powder and pulse for a couple of seconds to combine. Pour into a mixing bowl.</li>
+                        </ol>
+                    </section>
+
+                    <section class="m-recipe__section">
+                        <ul class="m-recipe__tags">
+                            <li class="tag">
+                                <a class="tag__link" href="">Deser</a>
+                            </li>
+                            <li class="tag">
+                                <a class="tag__link"href="">Dania główne</a>
+                            </li>
+                            <li class="tag">
+                                <a class="tag__link" href="">Pizza</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="col-sm-6">
+                    <section>
+                        <ul class="m-recipe__photos photos">
+                            <li class="photos__item">
+                                <a href="" class="photos__link">
+                                    <img class="photos__image" src="images/tmp/recipe-1.jpg" alt="Zdjęcje nr 1">
+                                </a>
+                            </li>
+                            <li class="photos__item">
+                                <a href="" class="photos__link">
+                                    <img class="photos__image" src="images/tmp/recipe-2.jpg" alt="Zdjęcje nr 2">
+                                </a>
+                            </li>
+                            <li class="photos__item">
+                                <a href="" class="photos__link">
+                                    <img class="photos__image" src="images/tmp/recipe-3.jpg" alt="Zdjęcje nr 3">
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -2,20 +2,23 @@
     <div class="m-add-recipe__top-bar top-bar">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-xs-6">
                     <h4 class="top-bar__title">Dodawanie przepisu</h4>
                     <a href="" class="btn-return top-bar__btn-return">Wróć do moich przepisów</a>
                 </div>
-                <div class="col-sm-6 pull-right">
+                <div class="col-xs-6 pull-right">
                     <ul class="top-bar__nav-buttons">
-                        <li class="top-bar__nav-buttons-item">
+                        <li class="top-bar__nav-buttons-item hidden-xs">
                             <a href="" class="btn">Podgląd</a>
                         </li>
-                        <li class="top-bar__nav-buttons-item">
+                        <li class="top-bar__nav-buttons-item hidden-xs">
                             <a href="" class="btn">Zapisz draft</a>
                         </li>
-                        <li class="top-bar__nav-buttons-item">
+                        <li class="top-bar__nav-buttons-item hidden-xs">
                             <a href="" class="btn btn--inverse">Zapisz i publikuj</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item visible-xs">
+                            <a href="" class="btn btn-options">Options</a>
                         </li>
                     </ul>
                 </div>
@@ -25,7 +28,7 @@
     <div class="m-add-recipe__content">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-md-4 col-lg-3">
                     <div class="m-add-recipe__photos photos">
                         <!-- ADD FIRST PHOTO -->
                         <!-- Po załadowaniu fotki dodaj sobie klasę first-photo--uploaded do first-photo, ona usunie bordera i ukryje forma. -->
@@ -37,7 +40,7 @@
                                 </form>
                             </div>
                             <div class="photos__filename">Photo_main.jpg</div>
-                            <a class="photos__btn-delete" href="">Usuń</a>
+                            <a class="photos__btn-delete" href=""><span>Usuń</span></a>
                         </div>
 
                         <ul class="photos__list">
@@ -53,7 +56,7 @@
                                     </div>
                                     <div class="col-xs-6 photo__actions">
                                         <div class="photos__filename">Photo2.jpg</div>
-                                        <a class="photos__btn-delete" href="">Usuń</a>
+                                        <a class="photos__btn-delete" href=""><span>Usuń</span></a>
                                     </div>
                                 </div>
                             </li>
@@ -69,7 +72,7 @@
                                     </div>
                                     <div class="col-xs-6 photo__actions">
                                         <div class="photos__filename">Photo3.jpg</div>
-                                        <a class="photos__btn-delete" href="">Usuń</a>
+                                        <a class="photos__btn-delete" href=""><span>Usuń</span></a>
                                     </div>
                                 </div>
                             </li>
@@ -84,15 +87,15 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-md-8 col-lg-9">
                     <form class="new-recipe">
                         <fieldset>
                             <label for="name">Nazwa potrawy</label>
                             <div class="row">
-                                <div class="col-xs-8">
+                                <div class="col-sm-8">
                                     <input type="text" id="name" name="name" placeholder="np. Wegański burger" />
                                 </div>
-                                <div class="col-xs-4">
+                                <div class="col-sm-4">
                                     <div class="portions">
                                         <button type="button" class="portions__btn-add"><i class="icon icon-plus"></i></button>
                                         <span class="portions__count">
@@ -124,17 +127,82 @@
 
                             <ul class="ingridients">
                                 <!-- INGRIDIENT -->
-                                <li class="igridient">
+                                <li class="ingridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name ingridient__name">
+                                        <label class="ingridient__label">Nazwa</label>
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                        <!-- ingridient name autocomplete -->
+                                        <!-- remove class - hidden - to display autocomplete -->
+                                        <div class="ingridient__autocomplete ingridient__autocomplete--name hidden">
+                                            <ul class="ingridient__autocomplete-list">
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding"><span class="ingridient__autocomplete-match">bez</span>glutenowa mąka kukurydziana - Bezgluten</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding"><span class="ingridient__autocomplete-match">bez</span>kaloryczny spray do smażenia - PAM</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">dorsz atlantycki (filet <span class="ingridient__autocomplete-match">bez</span> skóry)</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">jogurt naturalny łagodny smak, <span class="ingridient__autocomplete-match">bez</span> dodatku cukru Bakoma</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding"><span class="ingridient__autocomplete-match">bez</span>kaloryczny spray do smażenia - PAM</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">dorsz atlantycki (filet <span class="ingridient__autocomplete-match">bez</span> skóry)</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">jogurt naturalny łagodny smak, <span class="ingridient__autocomplete-match">bez</span> dodatku cukru Bakoma</a></li>
+                                            </ul>
+                                            <a href="" class="ingridient__autocomplete-btn-add"><span>Dodaj nowy składnik</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-amount">
+                                        <label class="ingridient__label">Ilość</label>
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <label class="ingridient__label">Jednostka</label>
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="col col-group ingridient__group">
+                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                        <!-- add group -->
+                                        <!-- remove class - hidden - to display autocomplete -->
+                                        <div class="ingridient__autocomplete ingridient__autocomplete--group hidden">
+                                            <div class="ingridient__autocomplete-content">
+                                                <form action="" method="">
+                                                    <input type="text" name="" class="ingridient__autocomplete-keyword" value="cias" placeholder="Nazwa grupy">
+                                                </form>
+                                                <ul class="ingridient__autocomplete-list">
+                                                    <li class="ingridient__autocomplete-item">
+                                                        <a href="" class="ingridient__autocomplete-finding">
+                                                            Ciasto <span class="ingridient__autocomplete-count">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="" class="ingridient__autocomplete-btn-add"><span>Dodaj grupę "cias"</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-order">
+                                        <span class="order">1</span>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                <li>
+
+                                <!-- INGRIDIENT -->
+                                <li class="ingridient">
                                     <div class="col col-move">
                                         <i class="icon icon-move"></i>
                                     </div>
                                     <div class="col col-name">
+                                        <label class="ingridient__label">Nazwa</label>
                                         <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
                                     </div>
                                     <div class="col col-amount">
+                                        <label class="ingridient__label">Ilość</label>
                                         <input type="text" name="ingridient[amount]" />
                                     </div>
                                     <div class="col col-unit">
+                                        <label class="ingridient__label">Jednostka</label>
                                         <select name="ingridient[unit]">
                                             <option value="">gram</option>
                                             <option value="">kilogram</option>
@@ -152,45 +220,20 @@
                                 <li>
 
                                 <!-- INGRIDIENT -->
-                                <li class="igridient">
+                                <li class="ingridient">
                                     <div class="col col-move">
                                         <i class="icon icon-move"></i>
                                     </div>
                                     <div class="col col-name">
+                                        <label class="ingridient__label">Nazwa</label>
                                         <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
                                     </div>
                                     <div class="col col-amount">
+                                        <label class="ingridient__label">Ilość</label>
                                         <input type="text" name="ingridient[amount]" />
                                     </div>
                                     <div class="col col-unit">
-                                        <select name="ingridient[unit]">
-                                            <option value="">gram</option>
-                                            <option value="">kilogram</option>
-                                        </select>
-                                    </div>
-                                    <div class="col col-group">
-                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
-                                    </div>
-                                    <div class="col col-order">
-                                        <span class="order">1</span>
-                                    </div>
-                                    <div class="col col-remove">
-                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
-                                    </div>
-                                <li>
-
-                                <!-- INGRIDIENT -->
-                                <li class="igridient">
-                                    <div class="col col-move">
-                                        <i class="icon icon-move"></i>
-                                    </div>
-                                    <div class="col col-name">
-                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
-                                    </div>
-                                    <div class="col col-amount">
-                                        <input type="text" name="ingridient[amount]" />
-                                    </div>
-                                    <div class="col col-unit">
+                                        <label class="ingridient__label">Jednostka</label>
                                         <select name="ingridient[unit]">
                                             <option value="">gram</option>
                                             <option value="">kilogram</option>
@@ -218,6 +261,17 @@
                                 <li class="step">
                                     <div class="col col-nr">
                                         <div class="order-number">1</div>
+                                    </div>
+                                    <div class="col col-description">
+                                        <textarea placeholder="Opisz czynności"></textarea>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </li>
+                                <li class="step">
+                                    <div class="col col-nr">
+                                        <div class="order-number">2</div>
                                     </div>
                                     <div class="col col-description">
                                         <textarea placeholder="Opisz czynności"></textarea>
