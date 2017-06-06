@@ -1,0 +1,493 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Makro Przepisy - Add recipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( ".ingridients" ).sortable({
+            placeholder: "ui-state-highlight"
+        });
+        $( ".ingridients" ).disableSelection();
+    } );
+    </script>
+  </head>
+  <body>
+    <!-- partial:modules/_navbar.html --><nav class="m-navbar">
+    <div class="container">
+        <div>
+            <div class="m-navbar__brand brand ">
+                <a href="" class="brand__link" title="">
+                    <img class="brand__image" src="images/logo/logo-symbol-black.svg" alt="Makro Składniki - logo">
+                </a>
+                <button class="m-navbar__toggle-menu toggle-menu collapsed"><span class="sr-only">Menu</span></button>
+            </div>
+            <!--
+            <div class="m-navbar__search search">
+                <form class="search__form" action="" method="get">
+                    <fieldset>
+                        <button class="search__submit" type="button"><i class="icon icon-search"></i></button>
+                        <input class="search__input" type="text" name="keyword" placeholder="Szukaj">
+                    </fieldset>
+                </form>
+            </div>
+            -->
+        </div>
+
+        <div class="m-navbar__menu menu">
+            <!--
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="" title="">Zarejestruj</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" title="">Zaloguj</a>
+                </li>
+            </ul>
+            -->
+            <ul class="menu__list menu__list pull-right hidden-xs">
+                <li class="menu__item">
+                    <a href="" class="account__notifications">
+                        <i class="icon icon-heart"></i>
+                        <span class="account__notifications-count">12</span>
+                    </a>
+                </li>
+                <li class="menu__item menu__item--border menu__item--dropdown">
+                    <a class="account__profile-link" href="" title="Przejdź do profilu użytkownika">
+                        <img class="account__profile-image" src="images/tmp/avatar-xs.jpg" alt="Jan Kowalski - avatar">
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu__list menu__list--dropdown">
+                <li class="menu__item menu__item--block menu__item--bordered">
+                    <a class="account__profile-link account__profile-link--xs visible-xs" href="">
+                        <span class="account__profile-image-wrapper">
+                            <img class="account__profile-image" src="images/tmp/avatar-xs.jpg" alt="Jan Kowalski - avatar">
+                        </span>
+                    </a>
+                    <a href="" class="menu__edit-profile"><strong>Jan Kowalski</strong>Edytuj profil</a>
+                </li>
+                <li class="menu__item menu__item--block">
+                    <a href="" class=""><i class="icon icon--rounded icon-cutlery"></i><span class="label">Moje przepisy</span></a>
+                </li>
+                <li class="menu__item menu__item--block">
+                    <a href="" class=""><i class="icon icon--rounded icon-basket"></i><span class="label">Moje składniki</span></a>
+                </li>
+                <li class="menu__item menu__item--block visible-xs">
+                    <a href="">
+                        <span class="account__notifications" href="" title="Sprawdź powiadomienia">
+                            <i class="icon icon-heart"></i>
+                            <span class="account__notifications-count">12</span>
+                        </span>
+                        <span class="account__notifications-label">Ulubione</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--
+        <div class="m-navbar__account account pull-right">
+            <a class="account__notifications-link" href="" title="Sprawdź powiadomienia">
+                <i class="icon icon-heart"></i>
+                <span class="account__notifications-count">12</span>
+            </a>
+            <a class="account__profile-link" href="" title="Przejdź do profilu użytkownika">
+                <span class="account__profile-image-wrapper">
+                    <img class="account__profile-image" src="images/tmp/avatar-xs.jpg" alt="Jan Kowalski - avatar">
+                </span>
+            </a>
+        </div>
+        -->
+    </div>
+</nav>
+<!-- partial -->
+    <main>
+        <!-- partial:modules/_add_recipe.html --><article class="m-add-recipe">
+    <div class="dropdown-menu">
+        <div class="dropdown-menu__content">
+            <h2 class="dropdown-menu__header">Dodaj przepis</h2>
+
+            <ul class="dropdown-menu__list">
+                <li class="dropdown-menu__item">
+                    <a href="" class="dropdown-menu__link">Podgląd</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="" class="dropdown-menu__link">Zapisz draft</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="" class="dropdown-menu__link">Zapisz i publikuj</a>
+                </li>
+            </ul>
+            <a href="" class="dropdown-menu__btn-close"><i class="icon icon-cross"></i></a>
+        </div>
+    </div>
+    <div class="m-add-recipe__top-bar top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4 class="top-bar__title">Dodawanie przepisu</h4>
+                    <a href="" class="btn-return top-bar__btn-return">Wróć do moich przepisów</a>
+                </div>
+                <div class="col-xs-6 pull-right">
+                    <ul class="top-bar__nav-buttons">
+                        <li class="top-bar__nav-buttons-item hidden-xs">
+                            <a href="" class="btn">Podgląd</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item hidden-xs">
+                            <a href="" class="btn">Zapisz draft</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item hidden-xs">
+                            <a href="" class="btn btn--inverse">Zapisz i publikuj</a>
+                        </li>
+                        <li class="top-bar__nav-buttons-item visible-xs">
+                            <a href="" class="btn btn-options js-add-recipe-options">Opcje</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-add-recipe__content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3">
+                    <div class="m-add-recipe__photos photos">
+                        <!-- ADD FIRST PHOTO -->
+                        <!-- Po załadowaniu fotki dodaj sobie klasę first-photo--uploaded do first-photo, ona usunie bordera i ukryje forma. -->
+                        <div class="first-photo__wrapper">
+                            <div class="first-photo first-photo--uploaded" style="background-image: url('images/tmp/recipe-1.jpg')">
+                                <form class="first-photo__form">
+                                    <input class="first-photo__input" id="first-photo" type="file" name="photo" />
+                                    <label for="first-photo" class="first-photo__label"><i class="icon icon-camera"></i>Dodaj główne<br>zdjęcie potrawy</label>
+                                </form>
+                            </div>
+                            <div class="photos__filename">Photo_main.jpg</div>
+                            <a class="photos__btn-delete" href=""><span>Usuń</span></a>
+                        </div>
+
+                        <ul class="photos__list">
+                            <!-- NEXT PHOTO -->
+                            <li class="photo">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <a href="" class="photo__link">
+                                            <div class="photo__wrapper">
+                                                <img class="photo__image" src="images/tmp/recipe-2.jpg">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 photo__actions">
+                                        <div class="photos__filename">Photo2.jpg</div>
+                                        <a class="photos__btn-delete" href=""><span>Usuń</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- NEXT PHOTO -->
+                            <li class="photo">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <a href="" class="photo__link">
+                                            <div class="photo__wrapper">
+                                                <img class="photo__image" src="images/tmp/recipe-3.jpg">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 photo__actions">
+                                        <div class="photos__filename">Photo3.jpg</div>
+                                        <a class="photos__btn-delete" href=""><span>Usuń</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <form class="more-photos">
+                            <div class="more-photos__wrapper">
+                                <!-- ważne jest tutaj żeby wartość dla for z labela była zgodna z id inputa -->
+                                <input class="more-photos__input" id="more-photos" type="file" name="photo" />
+                                <label for="more-photos" class="more-photos__label">Dodaj kolejne zdjęcia</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <form class="new-recipe">
+                        <fieldset>
+                            <label for="name">Nazwa potrawy</label>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <input type="text" id="name" name="name" placeholder="np. Wegański burger" />
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="portions">
+                                        <button type="button" class="portions__btn-add"><i class="icon icon-plus"></i></button>
+                                        <span class="portions__count">
+                                            <span class="portions__value">2</span> porcje
+                                        </span>
+                                        <button type="button" class="portions__btn-delete"><i class="icon icon-minus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Składniki</legend>
+
+                            <div class="ingridients-header">
+                                <div class="col name-header">
+                                    Nazwa
+                                </div>
+                                <div class="col amount-header">
+                                    Ilość
+                                </div>
+                                <div class="col unit-header">
+                                    Jednostka
+                                </div>
+                                <div class="col group-header">
+                                    Grupa składników
+                                </div>
+                            </div>
+
+                            <ul class="ingridients">
+                                <!-- INGRIDIENT -->
+                                <li class="ingridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name ingridient__name">
+                                        <label class="ingridient__label">Nazwa</label>
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                        <!-- ingridient name autocomplete -->
+                                        <!-- remove class - hidden - to display autocomplete -->
+                                        <div class="ingridient__autocomplete ingridient__autocomplete--name hidden">
+                                            <ul class="ingridient__autocomplete-list">
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding"><span class="ingridient__autocomplete-match">bez</span>glutenowa mąka kukurydziana - Bezgluten</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding"><span class="ingridient__autocomplete-match">bez</span>kaloryczny spray do smażenia - PAM</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">dorsz atlantycki (filet <span class="ingridient__autocomplete-match">bez</span> skóry)</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">jogurt naturalny łagodny smak, <span class="ingridient__autocomplete-match">bez</span> dodatku cukru Bakoma</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding"><span class="ingridient__autocomplete-match">bez</span>kaloryczny spray do smażenia - PAM</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">dorsz atlantycki (filet <span class="ingridient__autocomplete-match">bez</span> skóry)</a></li>
+                                                <li class="ingridient__autocomplete-item"><a href="" class="ingridient__autocomplete-finding">jogurt naturalny łagodny smak, <span class="ingridient__autocomplete-match">bez</span> dodatku cukru Bakoma</a></li>
+                                            </ul>
+                                            <a href="" class="ingridient__autocomplete-btn-add"><span>Dodaj nowy składnik</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-amount">
+                                        <label class="ingridient__label">Ilość</label>
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <label class="ingridient__label">Jednostka</label>
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="ingridient__extra-fields js-extra-fields" data-id="1">
+                                        <div class="col col-group">
+                                            <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                            <!-- add group -->
+                                            <!-- remove class - hidden - to display autocomplete -->
+                                            <div class="ingridient__autocomplete ingridient__autocomplete--group hidden">
+                                                <div class="ingridient__autocomplete-content">
+                                                    <form action="" method="">
+                                                        <input type="text" name="" class="ingridient__autocomplete-keyword" value="cias" placeholder="Nazwa grupy">
+                                                    </form>
+                                                    <ul class="ingridient__autocomplete-list">
+                                                        <li class="ingridient__autocomplete-item">
+                                                            <a href="" class="ingridient__autocomplete-finding">
+                                                                Ciasto <span class="ingridient__autocomplete-count">3</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="ingridient__autocomplete-btn-add"><span>Dodaj grupę "cias"</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col col-order">
+                                            <span class="order">1</span>
+                                        </div>
+                                        <div class="col col-remove">
+                                            <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <a href="" class="ingridient__btn-more" data-rel="1"><i class="icon icon-dots-3"></i></a>
+                                <li>
+
+                                <!-- INGRIDIENT -->
+                                <li class="ingridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name">
+                                        <label class="ingridient__label">Nazwa</label>
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                    </div>
+                                    <div class="col col-amount">
+                                        <label class="ingridient__label">Ilość</label>
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <label class="ingridient__label">Jednostka</label>
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="ingridient__extra-fields js-extra-fields" data-id="2">
+                                        <div class="col col-group">
+                                            <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                        </div>
+                                        <div class="col col-order">
+                                            <span class="order">1</span>
+                                        </div>
+                                        <div class="col col-remove">
+                                            <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <a href="" class="ingridient__btn-more" data-rel="2"><i class="icon icon-dots-3"></i></a>
+                                <li>
+
+                                <!-- INGRIDIENT -->
+                                <li class="ingridient">
+                                    <div class="col col-move">
+                                        <i class="icon icon-move"></i>
+                                    </div>
+                                    <div class="col col-name">
+                                        <label class="ingridient__label">Nazwa</label>
+                                        <input type="text" name="ingridient[name]" placeholder="np. Mąka bezglutenowa" />
+                                    </div>
+                                    <div class="col col-amount">
+                                        <label class="ingridient__label">Ilość</label>
+                                        <input type="text" name="ingridient[amount]" />
+                                    </div>
+                                    <div class="col col-unit">
+                                        <label class="ingridient__label">Jednostka</label>
+                                        <select name="ingridient[unit]">
+                                            <option value="">gram</option>
+                                            <option value="">kilogram</option>
+                                        </select>
+                                    </div>
+                                    <div class="ingridient__extra-fields js-extra-fields" data-id="3">
+                                        <div class="col col-group">
+                                            <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                        </div>
+                                        <div class="col col-order">
+                                            <span class="order">1</span>
+                                        </div>
+                                        <div class="col col-remove">
+                                            <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <a href="" class="ingridient__btn-more" data-rel="3"><i class="icon icon-dots-3"></i></a>
+                                <li>
+                            </ul>
+
+                            <a href="" class="btn-add-new-ingrident">Dodaj kolejny składnik</a>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Przygotowanie</legend>
+
+                            <ul class="recipe">
+                                <li class="step">
+                                    <div class="col col-nr">
+                                        <div class="order-number">1</div>
+                                    </div>
+                                    <div class="col col-description">
+                                        <textarea placeholder="Opisz czynności"></textarea>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </li>
+                                <li class="step">
+                                    <div class="col col-nr">
+                                        <div class="order-number">2</div>
+                                    </div>
+                                    <div class="col col-description">
+                                        <textarea placeholder="Opisz czynności"></textarea>
+                                    </div>
+                                    <div class="col col-remove">
+                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <a href="" class="btn-add-new-ingrident">Dodaj kolejny krok</a>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Tagi</legend>
+
+                            <div class="tag-wrapper">
+                                <input type="text" class="new-tag" placeholder="Wpisz nazwę tagu" />
+                                <button class="add-tag"><i class="icon icon-plus"></i></button>
+                            </div>
+
+                            <div class="m-tags m-tags--left">
+                                <ul class="m-tags__list">
+                                    <li class="tag">
+                                        <a class="tag__link tag__link--delete" href="">Deser</a>
+                                    </li>
+                                    <li class="tag">
+                                        <a class="tag__link tag__link--delete"href="">Dania główne</a>
+                                    </li>
+                                    <li class="tag">
+                                        <a class="tag__link tag__link--delete" href="">Pizza</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+    </main>
+    <!-- partial:modules/_footer.html --><footer class="m-footer">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h3 class="m-footer__group-title">Przepisy</h3>
+                <ul class="m-footer__list">
+                    <li class="list__item"><a href="" title="">Wszystkie</a></li>
+                    <li class="list__item"><a href="" title="">Top10</a></li>
+                    <li class="list__item"><a href="" title="">Filmy</a></li>
+                </ul>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h3 class="m-footer__group-title">Moja przestrzeń</h3>
+                <ul class="m-footer__list list">
+                    <li class="list__item"><a href="" title="">Dodaj przepis</a></li>
+                    <li class="list__item"><a href="" title="">Zarejestruj</a></li>
+                    <li class="list__item"><a href="" title="">Zaloguj</a></li>
+                </ul>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h3 class="m-footer__group-title">Makro przepisy</h3>
+                <ul class="m-footer__list list">
+                    <li class="list__item"><a href="" title="">Kontakt</a></li>
+                    <li class="list__item"><a href="" title="">Regulamin i polityka prywatności</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-4">
+                <h3 class="m-footer__group-title">Makro Przepisy</h3>
+                <ul class="m-footer__list list list--copyright">
+                    <li class="list__item">&copy; Copyright 2017</li>
+                    <li class="list__item"><a href="" title="">www.makroprzepisy.pl</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- partial -->
+    <script src="scripts/bundle.js"></script>
+  </body>
+</html>
