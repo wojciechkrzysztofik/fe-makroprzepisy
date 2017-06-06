@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Makro Przepisy - Add recipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( ".ingridients" ).sortable({
+            placeholder: "ui-state-highlight"
+        });
+        $( ".ingridients" ).disableSelection();
+    } );
+    </script>
+  </head>
+  <body class="has-popup">
+    <!-- partial:modules/_navbar.html -->NAVBAR<!-- partial -->
+    <main>
+        <!-- partial:modules/_add_recipe.html -->ADD RECIPE<!-- partial -->
+    </main>
+    <!-- partial:modules/_footer.html -->FOOTER<!-- partial -->
+    <!-- partial:modules/popups/_recipe-alert.html -->ALERT<!-- partial -->
+    <script src="scripts/bundle.js"></script>
+  </body>
+</html>
