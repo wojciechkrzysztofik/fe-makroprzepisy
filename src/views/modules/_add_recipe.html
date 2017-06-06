@@ -1,4 +1,22 @@
 <article class="m-add-recipe">
+    <div class="dropdown-menu">
+        <div class="dropdown-menu__content">
+            <h2 class="dropdown-menu__header">Dodaj przepis</h2>
+
+            <ul class="dropdown-menu__list">
+                <li class="dropdown-menu__item">
+                    <a href="" class="dropdown-menu__link">Podgląd</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="" class="dropdown-menu__link">Zapisz draft</a>
+                </li>
+                <li class="dropdown-menu__item">
+                    <a href="" class="dropdown-menu__link">Zapisz i publikuj</a>
+                </li>
+            </ul>
+            <a href="" class="dropdown-menu__btn-close"><i class="icon icon-cross"></i></a>
+        </div>
+    </div>
     <div class="m-add-recipe__top-bar top-bar">
         <div class="container">
             <div class="row">
@@ -18,7 +36,7 @@
                             <a href="" class="btn btn--inverse">Zapisz i publikuj</a>
                         </li>
                         <li class="top-bar__nav-buttons-item visible-xs">
-                            <a href="" class="btn btn-options">Options</a>
+                            <a href="" class="btn btn-options js-add-recipe-options">Opcje</a>
                         </li>
                     </ul>
                 </div>
@@ -160,32 +178,35 @@
                                             <option value="">kilogram</option>
                                         </select>
                                     </div>
-                                    <div class="col col-group ingridient__group">
-                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
-                                        <!-- add group -->
-                                        <!-- remove class - hidden - to display autocomplete -->
-                                        <div class="ingridient__autocomplete ingridient__autocomplete--group hidden">
-                                            <div class="ingridient__autocomplete-content">
-                                                <form action="" method="">
-                                                    <input type="text" name="" class="ingridient__autocomplete-keyword" value="cias" placeholder="Nazwa grupy">
-                                                </form>
-                                                <ul class="ingridient__autocomplete-list">
-                                                    <li class="ingridient__autocomplete-item">
-                                                        <a href="" class="ingridient__autocomplete-finding">
-                                                            Ciasto <span class="ingridient__autocomplete-count">3</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                    <div class="ingridient__extra-fields js-extra-fields" data-id="1">
+                                        <div class="col col-group">
+                                            <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                            <!-- add group -->
+                                            <!-- remove class - hidden - to display autocomplete -->
+                                            <div class="ingridient__autocomplete ingridient__autocomplete--group hidden">
+                                                <div class="ingridient__autocomplete-content">
+                                                    <form action="" method="">
+                                                        <input type="text" name="" class="ingridient__autocomplete-keyword" value="cias" placeholder="Nazwa grupy">
+                                                    </form>
+                                                    <ul class="ingridient__autocomplete-list">
+                                                        <li class="ingridient__autocomplete-item">
+                                                            <a href="" class="ingridient__autocomplete-finding">
+                                                                Ciasto <span class="ingridient__autocomplete-count">3</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <a href="" class="ingridient__autocomplete-btn-add"><span>Dodaj grupę "cias"</span></a>
                                             </div>
-                                            <a href="" class="ingridient__autocomplete-btn-add"><span>Dodaj grupę "cias"</span></a>
+                                        </div>
+                                        <div class="col col-order">
+                                            <span class="order">1</span>
+                                        </div>
+                                        <div class="col col-remove">
+                                            <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
                                         </div>
                                     </div>
-                                    <div class="col col-order">
-                                        <span class="order">1</span>
-                                    </div>
-                                    <div class="col col-remove">
-                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
-                                    </div>
+                                    <a href="" class="ingridient__btn-more" data-rel="1"><i class="icon icon-dots-3"></i></a>
                                 <li>
 
                                 <!-- INGRIDIENT -->
@@ -208,15 +229,18 @@
                                             <option value="">kilogram</option>
                                         </select>
                                     </div>
-                                    <div class="col col-group">
-                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                    <div class="ingridient__extra-fields js-extra-fields" data-id="2">
+                                        <div class="col col-group">
+                                            <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                        </div>
+                                        <div class="col col-order">
+                                            <span class="order">1</span>
+                                        </div>
+                                        <div class="col col-remove">
+                                            <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                        </div>
                                     </div>
-                                    <div class="col col-order">
-                                        <span class="order">1</span>
-                                    </div>
-                                    <div class="col col-remove">
-                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
-                                    </div>
+                                    <a href="" class="ingridient__btn-more" data-rel="2"><i class="icon icon-dots-3"></i></a>
                                 <li>
 
                                 <!-- INGRIDIENT -->
@@ -239,15 +263,18 @@
                                             <option value="">kilogram</option>
                                         </select>
                                     </div>
-                                    <div class="col col-group">
-                                        <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                    <div class="ingridient__extra-fields js-extra-fields" data-id="3">
+                                        <div class="col col-group">
+                                            <a href="" class="btn-add-to-group">Dodaj do grupy</a>
+                                        </div>
+                                        <div class="col col-order">
+                                            <span class="order">1</span>
+                                        </div>
+                                        <div class="col col-remove">
+                                            <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
+                                        </div>
                                     </div>
-                                    <div class="col col-order">
-                                        <span class="order">1</span>
-                                    </div>
-                                    <div class="col col-remove">
-                                        <a href="" class="btn-remove"><i class="icon icon-trash"></i></a>
-                                    </div>
+                                    <a href="" class="ingridient__btn-more" data-rel="3"><i class="icon icon-dots-3"></i></a>
                                 <li>
                             </ul>
 

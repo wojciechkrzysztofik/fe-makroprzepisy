@@ -340,11 +340,14 @@
             padding: 10px 0 30px;
             margin-bottom: 20px;
             border-bottom: 1px solid $color-pale-gray;
+            overflow: hidden;
+            position: relative;
 
             @media(min-width: $screen-sm) {
                 margin-bottom: 0;
                 padding: 10px 0;
                 border-bottom: none;
+                overflow: auto;
             }
 
             &.ui-sortable-helper {
@@ -476,6 +479,30 @@
                     }
                 }
             }
+
+            &__btn-more {
+                position: absolute;
+                top: 7px;
+                right: 5px;
+
+                &:focus,
+                &:hover {
+                    text-decoration: none;
+                }
+
+                @media(min-width: $screen-sm) {
+                    display: none;
+                }
+            }
+
+            &__extra-fields {
+                @media(max-width: $screen-xs-max) {
+                    margin-top: 20px;
+                    float: left;
+                    width: 100%;
+                    display: none;
+                }
+            }
         }
 
         .ui-sortable-placeholder {
@@ -527,11 +554,8 @@
 
         }
         .col-group {
-            display: none;
-
             @media(min-width: $screen-sm) {
                 width: 140px;
-                display: block;
             }
 
             .btn-add-to-group {
@@ -553,11 +577,8 @@
         }
 
         .col-order {
-            display: none;
-
             @media(min-width: $screen-sm) {
                 width: 25px;
-                display: block;
             }
 
             .order {
@@ -574,11 +595,8 @@
         }
 
         .col-remove {
-            display: none;
-
             @media(min-width: $screen-sm) {
                 width: 80px;
-                display: block;
             }
 
             .btn-remove {
@@ -665,7 +683,7 @@
 
         .col-description {
             width: 100%;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
 
             @media(min-width: 768px) {
                 width: 86%;
