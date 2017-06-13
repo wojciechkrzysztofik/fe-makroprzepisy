@@ -7,14 +7,16 @@
 
     &__title {
         font-family: mulisemibold;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
         line-height: 1.3;
-        margin: 5px 0 15px;
+        margin: 5px 0 35px;
+        padding: 0 30px;
+        text-align: center;
 
         @media(min-width: $screen-md) {
             font-size: 2.2rem;
-            margin: 0;
+            padding: 0;
         }
     }
 
@@ -26,6 +28,37 @@
     &__section {
         margin-bottom: 25px;
         overflow: hidden;
+    }
+
+    &__links {
+
+        &-list {
+            text-align: center;
+        }
+
+        &-link {
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &-item {
+            display: inline-block;
+            margin: 15px 40px;
+
+            &--add-to-favorites .icon {
+                font-size: 1.4rem;
+            }
+
+            &--facebook {
+                font-size: 1.3rem;
+            }
+
+            &--pinterest {
+                font-size: 1.3rem;
+            }
+        }
     }
 
     .list {
@@ -64,97 +97,74 @@
     }
 
     .macro {
-        background: $color-pale-gray;
-        overflow: hidden;
-        padding: 10px 0 6px;
-        margin: 10px 0 20px;
-
-        @media(min-width: $screen-md) {
-            margin: 0;
-        }
+        text-align: center;
+        margin-bottom: 35px;
 
         &__col {
-            display: inline-block;
-            width: 25%;
-            padding: 0 12px;
             text-align: center;
+            display: inline-block;
+            margin: 0 15px;
 
-            @media(min-width:$screen-sm) {
-                padding: 0 0 0 50px;
-            }
-
-
-            @media(min-width:$screen-lg) {
-                padding: 0 0 0 20px;
-            }
-
-            &:first-child {
-                width: 20%;
-                border-right: 1px solid $color-cool-gray;
-                position: relative;
-
-                @media(min-width:$screen-sm) {
-                    padding-left: 30px;
-                    width: 19%;
-                }
-
-                @media(min-width:$screen-md) {
-                    width: 20%;
-                }
-
+            &--kcal {
                 @media(max-width: $screen-xs-max) {
-                    float: left;
-                    padding: 12px;
-                    margin-top: 6px;
-                    height: 38px;
-
-                    .kcal {
-                        &__icon {
-                            border: none;
-                            font-size: 1rem;
-                            position: absolute;
-                            bottom: -3px;
-                            left: 4px;
-                            right: 0;
-                            margin: auto;
-                        }
-
-                        &__number {
-                            position: absolute;
-                            bottom: 15px;
-                            font-family: mulibold;
-                            width: 75%;
-                            text-align: center;
-                            margin: 0;
-                        }
-                    }
+                    padding-right: 30px;
+                    border-right: 1px solid $color-cool-gray;
                 }
             }
 
-            strong {
-                display: block;
+            @media(min-width: $screen-md) {
+                margin: 0 35px;
+            }
+
+            &--label {
+                height: 85px;
+                min-width: 60px;
+                margin: 0;
+                display: none;
 
                 @media(min-width: $screen-sm) {
-                    display: inline;
+                    display: inline-block;
                 }
+            }
+
+            @media(max-width: $screen-xs-max) {
+                strong {
+                    display: block;
+                }
+            }
+        }
+
+        &__unit {
+            display: block;
+
+            @media(min-width: $screen-sm) {
+                display: none;
             }
         }
 
         &__icon {
-            font-size: 2rem;
-            float: left;
-            margin-right: 4px;
-            display: none;
+            display: inline-block;
+            width: 40px;
 
-            @media(min-width: $screen-lg) {
-                display: block;
+            @media(min-width: $screen-sm) {
+                width: 60px;
             }
         }
 
-        &__label {
-            float: left;
-            margin: 4px 0 0 5px;
+        &__value {
+            display: block;
+            margin-top: 5px;
         }
+
+        &__label {
+            color: $color-cool-gray;
+            float: left;
+            line-height: 75px;
+        }
+    }
+
+    .portions {
+        text-align: center;
     }
 
     .photos {

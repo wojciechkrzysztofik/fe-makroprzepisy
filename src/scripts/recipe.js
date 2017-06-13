@@ -25,13 +25,14 @@ const recipeSetup = function() {
 
     let checkWindowSize = function() {
         let screenWidth = window.innerWidth;
-
+/*
         if(screenWidth >= 992) {
             contentContainer.insertBefore(title, contentContainer.firstChild);
         }
         if(screenWidth < 992) {
             favoritesContainer.appendChild(title);
         }
+*/
         if(screenWidth <= 480) {
             macroContainer.appendChild(firstPhoto);
         }
