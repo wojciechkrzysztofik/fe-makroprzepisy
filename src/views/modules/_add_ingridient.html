@@ -1,0 +1,103 @@
+<article class="m-add-ingridient">
+    <div class="m-add-ingridient__top-bar top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4 class="top-bar__title">Dodawanie składnika</h4>
+                    <a href="" class="btn-return top-bar__btn-return">Wróć do moich składników</a>
+                </div>
+                <div class="col-sm-6 pull-right">
+                    <ul class="top-bar__nav-buttons">
+                        <li class="top-bar__nav-buttons-item">
+                            <a href="" class="btn  btn--inverse">Dodaj składnik</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-add-ingridient__content">
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3">
+                <form class="m-add-ingridient__form form" action="" method="post">
+                    <div class="form__field">
+                        <label for="name">Nazwa składnika</label>
+                        <input class="form__input" type="text" name="name" id="name" placeholder="np. Awokado HASS (EKO)">
+                    </div>
+                    <div class="form__field">
+                        <label for="short_name">Odmieniona nazwa <span class="form__optional">opcjonalnie <a href="" class="btn-tooltip"><i class="icon icon-information"></i></a></span></label>
+                        <input class="form__input" type="text" name="short_name" id="short_name" placeholder="np. Awokado">
+                    </div>
+                    <div class="form__field">
+                        <label for="producer">Producent / Marka</label>
+                        <input class="form__input" type="text" name="producer" id="producer" placeholder="np. Godpoda Huscy">
+                    </div>
+                    <div class="form__field">
+                        <label for="producer">Wybierz jednostkę</label>
+                        <div class="form__units">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select class="form__select" name="unit" id="unit">
+                                        <option value="" disabled selected>np. sztuka</option>
+                                        <option value="sztuka">sztuka</option>
+                                        <option value="gram">gram</option>
+                                        <option value="kilogram">kilogram</option>
+                                        <option value="mililitr">mililitr</option>
+                                        <option value="litr">listr</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-5">
+                                    <input class="form__input form__input--quantity" type="text" name="quantity" id="quantity" placeholder="np. 50"> <span class="form__unit">gram</span>
+                                </div>
+                                <div class="col-md-1">
+                                    <a href="#" class="form__btn-remove"><i class="icon icon-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="form__btn-add-unit"><span>Dodaj kolejną jednostkę</span></a>
+                    </div>
+
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Na 100 gram produktu:</legend>
+
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="form__field">
+                                <label class="form__label" for="energy">Energia</label>
+                                <input class="form__input form__input--energy" type="text" name="energy" id="energy"> kcal
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <div class="form__field">
+                                <label class="form__label" for="carbo">Węglowodany</label>
+                                <input class="form__input form__input--macro" type="text" name="carbo" id="carbo"> gram
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <div class="form__field">
+                                <label class="form__label" for="fat">Tłuszcz</label>
+                                <input class="form__input form__input--macro" type="text" name="fat" id="fat"> gram
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <div class="form__field">
+                                <label class="form__label" for="protein">Białko</label>
+                                <input class="form__input form__input--macro" type="text" name="protein" id="protein"> gram
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <div class="form__field">
+                                <label class="form__label" for="roughage">Błonnik <span class="form__optional">Opcjonalnie <a href="" class="btn-tooltip"><i class="icon icon-information"></i></a></span></label>
+                                <input class="form__input form__input--macro" type="text" name="roughage" id="roughage"> gram
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
