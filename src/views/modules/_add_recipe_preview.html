@@ -28,29 +28,29 @@
 
     <article class="m-recipe">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 add-to-favorites__wrapper">
-                    <button type="button" class="m-recipe__add-to-favorites add-to-favorites">
-                        <i class="icon icon-heart add-to-favorites__icon"></i>
-                        <span class="label add-to-favorites__label">Do do ulubionych!</span>
-                    </button>
-                    <!--
-                    // "checked" version:
-                    <button type="button" class="m-recipe__add-to-favorites add-to-favorites checked">
-                        <i class="icon icon-heart add-to-favorites__icon"></i>
-                        <span class="label add-to-favorites__label">W ulubionych!</span>
-                    </button>
-                    -->
-                </div>
-                <div class="col-md-6 m-recipe__macro-wrapper">
-                    <div class="recipe__macro macro">
-                        <!-- partial:_macro-bar.html -->MACRO BAR<!-- partial -->
-                    </div>
-                </div>
+            <!-- SOCIAL MEDIA BUTTONS -->
+            <div class="m-recipe__links">
+                <ul class="m-recipe__links-list">
+                    <li class="m-recipe__links-item m-recipe__links-item--add-to-favorites">
+                        <a class="m-recipe__links-link" href=""><i class="icon icon-heart"></i></a>
+                    </li>
+                    <li class="m-recipe__links-item m-recipe__links-item--facebook">
+                        <a class="m-recipe__links-link" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="m-recipe__links-item m-recipe__links-item--pinterest">
+                        <a class="m-recipe__links-link" href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
             </div>
+
+            <h1 class="m-recipe__title">Burger z burakiem i karmelizowaną cebulą</h1>
+
+            <div class="m-recipe__macro macro">
+                <!-- partial:_macro-bar.html -->MACRO BAR<!-- partial -->
+            </div>
+
             <div class="row">
                 <div class="col-sm-6 m-recipe__content">
-                    <h1 class="m-recipe__title">Burger z burakiem i karmelizowaną cebulą</h1>
                     <div class="m-recipe__portions portions">
                         <button type="button" class="portions__btn-add"><i class="icon icon-plus"></i></button>
                         <span class="portions__count">
@@ -152,6 +152,18 @@
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+        <div class="m-recipe__title-bar title-bar">
+            <div class="row">
+                <div class="col-sm-7 col-md-5">
+                    <p class="title-bar__title">Burger z burakiem i karmelizowaną cebulą</p>
+                </div>
+                <div class="col-sm-5 col-md-7">
+                    <div class="title-bar__macro macro">
+                        <!-- partial:_macro-bar.html -->MACRO BAR<!-- partial -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</article>
