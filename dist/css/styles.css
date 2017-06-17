@@ -3801,6 +3801,10 @@ button {
 .u-align-right {
   text-align: right; }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .u-align-right-md {
+    text-align: right; } }
+
 @font-face {
   font-family: 'makro-icons';
   src: url("../fonts/makro-icons/makro_icons.eot?lhiz2i");
@@ -8165,27 +8169,34 @@ textarea {
       .m-add-ingridient .form .btn-tooltip:hover, .m-add-ingridient .form .btn-tooltip:focus {
         text-decoration: none; }
 
-.m-ingridients {
+.m-my-ingridients,
+.m-my-recipes {
   padding: 80px 0; }
   @media (min-width: 768px) {
-    .m-ingridients {
+    .m-my-ingridients,
+    .m-my-recipes {
       padding: 80px 0; } }
-  .m-ingridients__header {
+  .m-my-ingridients__header,
+  .m-my-recipes__header {
     font-size: 20px;
     margin-bottom: 50px; }
-  .m-ingridients__btn-add-ingridient {
+  .m-my-ingridients__btn-add-ingridient,
+  .m-my-recipes__btn-add-ingridient {
     display: block;
     position: relative;
     text-align: center; }
     @media (min-width: 768px) {
-      .m-ingridients__btn-add-ingridient {
+      .m-my-ingridients__btn-add-ingridient,
+      .m-my-recipes__btn-add-ingridient {
         text-align: left;
         display: inline-block;
         padding: 15px 50px 0 0; } }
     @media (max-width: 767px) {
-      .m-ingridients__btn-add-ingridient span {
+      .m-my-ingridients__btn-add-ingridient span,
+      .m-my-recipes__btn-add-ingridient span {
         display: none; } }
-    .m-ingridients__btn-add-ingridient::after {
+    .m-my-ingridients__btn-add-ingridient::after,
+    .m-my-recipes__btn-add-ingridient::after {
       content: "\e996";
       font-family: 'makro-icons';
       background: #000;
@@ -8200,44 +8211,73 @@ textarea {
       float: right;
       margin-top: 10px; }
       @media (min-width: 768px) {
-        .m-ingridients__btn-add-ingridient::after {
+        .m-my-ingridients__btn-add-ingridient::after,
+        .m-my-recipes__btn-add-ingridient::after {
           text-align: center;
           position: absolute;
           top: 0;
           right: 0;
           margin: 10px auto;
           float: none; } }
-  .m-ingridients__list-header {
+  .m-my-ingridients__list-header,
+  .m-my-recipes__list-header {
     font-size: 12px;
     color: #9898a0;
     border-bottom: 1px solid #e2e3e7;
     padding-bottom: 10px;
     margin-bottom: 10px; }
-  .m-ingridients__list-body {
+  .m-my-ingridients__list-body,
+  .m-my-recipes__list-body {
     font-size: 14px;
     color: #000; }
-  .m-ingridients__list-item {
+  .m-my-ingridients__list-item,
+  .m-my-recipes__list-item {
     line-height: 15px;
     padding: 4px 0 12px; }
     @media (min-width: 768px) {
-      .m-ingridients__list-item {
+      .m-my-ingridients__list-item,
+      .m-my-recipes__list-item {
         line-height: 50px;
         padding: 0; } }
-    .m-ingridients__list-item:nth-child(even) {
+    .m-my-ingridients__list-item:nth-child(even),
+    .m-my-recipes__list-item:nth-child(even) {
       background: #f2f2f5; }
-    .m-ingridients__list-item--strong {
+    .m-my-ingridients__list-item--strong,
+    .m-my-recipes__list-item--strong {
       font-weight: bold;
       font-size: 15px; }
-    .m-ingridients__list-item .kcal__icon {
+    @media (max-width: 767px) {
+      .m-my-ingridients__list-item--name,
+      .m-my-recipes__list-item--name {
+        font-size: 13px; } }
+    .m-my-ingridients__list-item .kcal__icon,
+    .m-my-recipes__list-item .kcal__icon {
       margin-top: 13px; }
+  .m-my-ingridients__image,
+  .m-my-recipes__image {
+    width: 60px;
+    height: 38px;
+    margin-right: 5px; }
+  @media (min-width: 992px) {
+    .m-my-ingridients__btn-publish,
+    .m-my-recipes__btn-publish {
+      margin-right: 5px; } }
   @media (max-width: 767px) {
-    .m-ingridients__btn-edit {
+    .m-my-ingridients__btn-edit,
+    .m-my-recipes__btn-edit {
       padding: 6px;
       position: absolute;
       top: -32px;
       right: 20px; } }
-  .m-ingridients__btn-edit .icon {
+  .m-my-ingridients__btn-edit .icon,
+  .m-my-recipes__btn-edit .icon {
     font-size: 16px; }
+
+@media (max-width: 767px) {
+  .m-my-recipes__list-item {
+    padding: 8px 0; }
+  .m-my-recipes__btn-edit {
+    margin-top: 4px; } }
 
 .dropdown-menu {
   position: fixed;

@@ -12,3 +12,9 @@
 .u-align-right {
     text-align: right;
 }
+
+.u-align-right-md {
+    @media(min-width: $screen-md) and (max-width: $screen-md-max) {
+        text-align: right;
+    }
+}
