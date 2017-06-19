@@ -8438,6 +8438,12 @@ textarea {
       content: "\e9b9"; }
     .m-register .form__input-wrapper--password::before {
       content: "\e974"; }
+    .m-register .form__input-wrapper--error input {
+      border-color: #d0011b; }
+  .m-register .form__error {
+    font-size: 12px;
+    color: #d0011b;
+    line-height: 2; }
   .m-register .form__input {
     width: 100%;
     border: 1px solid #9898a0;
@@ -8473,6 +8479,17 @@ textarea {
     font-family: mulisemibold;
     margin-top: 6px;
     float: right; }
+    .m-register .footer__text--small {
+      font-size: 12px; }
+  .m-register .footer__link {
+    margin-top: 2px;
+    display: block;
+    text-decoration: underline;
+    font-weight: bold; }
+    .m-register .footer__link:focus, .m-register .footer__link:hover {
+      text-decoration: none; }
+    .m-register .footer__link--small {
+      font-size: 12px; }
 
 .m-register__log-in {
   background: transparent;
@@ -8485,6 +8502,38 @@ textarea {
   .m-register__log-in:focus, .m-register__log-in:hover {
     background: #e2e3e7;
     border: 1px solid #e2e3e7; }
+
+.m-register__remember {
+  font-size: 12px;
+  line-height: 1.8; }
+  .m-register__remember input {
+    margin-right: 5px; }
+
+.m-register__remind-password {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 1.8; }
+  @media (min-width: 768px) {
+    .m-register__remind-password {
+      float: right; } }
+  .m-register__remind-password:focus, .m-register__remind-password:hover {
+    text-decoration: none; }
+
+.m-register__content {
+  padding: 0 50px; }
+  .m-register__content p {
+    margin-bottom: 20px;
+    line-height: 22px; }
+
+.m-register__welcome-icon {
+  width: 52px;
+  margin: 0 auto 20px;
+  display: block; }
+
+.m-register__start {
+  margin-bottom: 30px;
+  padding: 6px 30px 8px; }
 
 .m-footer {
   border-top: 1px solid #9898a0; }

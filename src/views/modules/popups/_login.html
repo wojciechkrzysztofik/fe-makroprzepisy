@@ -1,0 +1,41 @@
+<div class="m-popup m-register visible">
+    <button type="button" class="m-popup__close">Zamknij</button>
+
+    <h1 class="m-popup__header">
+        <img class="m-popup__logo" src="images/logo/logo-symbol-black.svg" alt="Makro Składniki - logo">
+    </h1>
+
+    <button type="button" class="m-popup__sm-btn m-popup__sm-btn--fb">Zaloguj się z: Facebook</button>
+    <button type="button" class="m-popup__sm-btn m-popup__sm-btn--google">Zaloguj się z: Google</button>
+
+    <p class="m-popup__text">lub</p>
+
+    <form class="m-register__form form" action="" method="post">
+        <div class="form__input-wrapper form__input-wrapper--email form__input-wrapper--error">
+            <input class="form__input" type="email" name="email" placeholder="Adres e-mail">
+            <span class="form__error">Please enter valid e-mail</span>
+        </div>
+        <div class="form__input-wrapper form__input-wrapper--password">
+            <input class="form__input" type="password" name="password" placeholder="Hasło">
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label class="m-register__remember" for="remember">
+                    <input class="form__input--checkbox" type="checkbox" name="remember" id="remember">Zapamiętaj mnie
+                </label>
+            </div>
+            <div class="col-sm-6">
+                <a href="" class="m-register__remind-password">Nie możesz się zalogować</a>
+            </div>
+        </div>
+
+        <button type="button" class="m-register__submit">Zaloguj się</button>
+    </form>
+
+    <footer class="m-popup__footer footer">
+        <div class="row">
+            <div class="col-xs-6"><span class="footer__text">Masz już konto?</span></div>
+            <div class="col-xs-6"><button type="button" class="m-register__log-in">Zaloguj się</button></div>
+        </div>
+    </footer>
+</div>
