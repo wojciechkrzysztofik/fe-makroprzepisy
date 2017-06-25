@@ -281,7 +281,7 @@
             }
         }
 
-        label {
+        label:not(.new-recipe__name) {
             color: $color-cool-gray;
             font-weight: normal;
 

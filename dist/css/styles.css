@@ -7801,11 +7801,11 @@ textarea {
       @media (min-width: 768px) {
         .m-add-recipe fieldset legend {
           font-size: 14px; } }
-    .m-add-recipe fieldset label {
+    .m-add-recipe fieldset label:not(.new-recipe__name) {
       color: #9898a0;
       font-weight: normal; }
       @media (min-width: 768px) {
-        .m-add-recipe fieldset label {
+        .m-add-recipe fieldset label:not(.new-recipe__name) {
           display: none; } }
   .m-add-recipe .ingridients-header {
     display: none; }
