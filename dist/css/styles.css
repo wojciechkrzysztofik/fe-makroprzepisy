@@ -6981,6 +6981,96 @@ textarea {
     background: #e2e3e7;
     border-color: #e2e3e7; }
 
+.ingridient__autocomplete {
+  position: absolute;
+  top: 68px;
+  background: #fff;
+  border: 1px solid #9898a0;
+  width: 100%;
+  z-index: 1; }
+  @media (max-width: 767px) {
+    .ingridient__autocomplete {
+      width: 100%;
+      position: static;
+      margin-top: -1px; } }
+  @media (min-width: 768px) {
+    .ingridient__autocomplete {
+      width: 435px;
+      top: 39px; } }
+  .ingridient__autocomplete-list {
+    padding: 0 26px;
+    max-height: 160px;
+    overflow: scroll; }
+  .ingridient__autocomplete-item {
+    line-height: 40px; }
+  .ingridient__autocomplete-match {
+    color: #000;
+    font-weight: bold; }
+  .ingridient__autocomplete-finding {
+    text-decoration: none;
+    color: #9898a0; }
+    .ingridient__autocomplete-finding:focus, .ingridient__autocomplete-finding:hover {
+      color: #000; }
+  .ingridient__autocomplete-btn-add {
+    display: block;
+    background: #000;
+    color: #fff;
+    padding: 6px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s; }
+    .ingridient__autocomplete-btn-add span {
+      position: relative;
+      padding-left: 16px; }
+      .ingridient__autocomplete-btn-add span::before {
+        content: "\e996";
+        font-family: 'makro-icons';
+        position: absolute;
+        top: -5px;
+        left: 0; }
+    .ingridient__autocomplete-btn-add:focus, .ingridient__autocomplete-btn-add:hover {
+      background: #9898a0; }
+  .ingridient__autocomplete-content {
+    padding: 25px 13px; }
+  .ingridient__autocomplete .hidden {
+    display: none; }
+  .ingridient__autocomplete--group {
+    width: 280px;
+    top: 45px;
+    left: -20px; }
+    .ingridient__autocomplete--group::before {
+      content: '';
+      height: 10px;
+      width: 10px;
+      background: #fff;
+      border-top: 1px solid #9898a0;
+      border-right: 1px solid #9898a0;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: -6px;
+      left: 25px;
+      z-index: 2; }
+    .ingridient__autocomplete--group .ingridient__autocomplete-list {
+      max-height: 160px;
+      overflow: scroll;
+      padding: 0;
+      margin-top: 10px; }
+    .ingridient__autocomplete--group .ingridient__autocomplete-item {
+      border-bottom: 1px solid #e2e3e7;
+      position: relative; }
+    .ingridient__autocomplete--group .ingridient__autocomplete-count {
+      background: #e2e3e7;
+      color: #9898a0;
+      text-align: center;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 6px;
+      line-height: 25px; }
+
 .m-navbar {
   position: fixed;
   z-index: 2;
@@ -7750,102 +7840,21 @@ textarea {
     padding: 10px 0 30px;
     margin-bottom: 20px;
     border-bottom: 1px solid #e2e3e7;
-    overflow: hidden;
+    overflow: visible;
     position: relative; }
+    @media (max-width: 767px) {
+      .m-add-recipe .ingridients .ingridient {
+        overflow: hidden; } }
     @media (min-width: 768px) {
       .m-add-recipe .ingridients .ingridient {
         margin-bottom: 0;
         padding: 10px 0;
         border-bottom: none;
-        overflow: auto; } }
+        overflow: visible; } }
     .m-add-recipe .ingridients .ingridient.ui-sortable-helper {
       box-shadow: 0 0 15px 0 rgba(152, 152, 160, 0.5); }
     .m-add-recipe .ingridients .ingridient__name, .m-add-recipe .ingridients .ingridient__group {
       position: relative; }
-    .m-add-recipe .ingridients .ingridient__autocomplete {
-      position: absolute;
-      top: 68px;
-      background: #fff;
-      border: 1px solid #9898a0;
-      width: 100%;
-      z-index: 1; }
-      @media (min-width: 768px) {
-        .m-add-recipe .ingridients .ingridient__autocomplete {
-          width: 435px;
-          top: 39px; } }
-      .m-add-recipe .ingridients .ingridient__autocomplete-list {
-        padding: 0 26px;
-        max-height: 160px;
-        overflow: scroll; }
-      .m-add-recipe .ingridients .ingridient__autocomplete-item {
-        line-height: 40px; }
-      .m-add-recipe .ingridients .ingridient__autocomplete-match {
-        color: #000;
-        font-weight: bold; }
-      .m-add-recipe .ingridients .ingridient__autocomplete-finding {
-        text-decoration: none;
-        color: #9898a0; }
-        .m-add-recipe .ingridients .ingridient__autocomplete-finding:focus, .m-add-recipe .ingridients .ingridient__autocomplete-finding:hover {
-          color: #000; }
-      .m-add-recipe .ingridients .ingridient__autocomplete-btn-add {
-        display: block;
-        background: #000;
-        color: #fff;
-        padding: 6px 0;
-        text-align: center;
-        text-decoration: none;
-        transition: all .2s; }
-        .m-add-recipe .ingridients .ingridient__autocomplete-btn-add span {
-          position: relative;
-          padding-left: 16px; }
-          .m-add-recipe .ingridients .ingridient__autocomplete-btn-add span::before {
-            content: "\e996";
-            font-family: 'makro-icons';
-            position: absolute;
-            top: -5px;
-            left: 0; }
-        .m-add-recipe .ingridients .ingridient__autocomplete-btn-add:focus, .m-add-recipe .ingridients .ingridient__autocomplete-btn-add:hover {
-          background: #9898a0; }
-      .m-add-recipe .ingridients .ingridient__autocomplete-content {
-        padding: 25px 13px; }
-      .m-add-recipe .ingridients .ingridient__autocomplete .hidden {
-        display: none; }
-      .m-add-recipe .ingridients .ingridient__autocomplete--group {
-        width: 280px;
-        top: 45px;
-        left: -20px; }
-        .m-add-recipe .ingridients .ingridient__autocomplete--group::before {
-          content: '';
-          height: 10px;
-          width: 10px;
-          background: #fff;
-          border-top: 1px solid #9898a0;
-          border-right: 1px solid #9898a0;
-          transform: rotate(-45deg);
-          position: absolute;
-          top: -6px;
-          left: 25px;
-          z-index: 2; }
-        .m-add-recipe .ingridients .ingridient__autocomplete--group .ingridient__autocomplete-list {
-          max-height: 160px;
-          overflow: scroll;
-          padding: 0;
-          margin-top: 10px; }
-        .m-add-recipe .ingridients .ingridient__autocomplete--group .ingridient__autocomplete-item {
-          border-bottom: 1px solid #e2e3e7;
-          position: relative; }
-        .m-add-recipe .ingridients .ingridient__autocomplete--group .ingridient__autocomplete-count {
-          background: #e2e3e7;
-          color: #9898a0;
-          text-align: center;
-          border-radius: 50%;
-          width: 25px;
-          height: 25px;
-          display: block;
-          position: absolute;
-          right: 0;
-          top: 6px;
-          line-height: 25px; }
     .m-add-recipe .ingridients .ingridient__btn-more {
       position: absolute;
       top: 7px;
@@ -7893,19 +7902,21 @@ textarea {
     width: 82px; }
   .m-add-recipe .ingridients .col-unit {
     width: 95px; }
-  @media (min-width: 768px) {
-    .m-add-recipe .ingridients .col-group {
-      width: 140px; } }
-  .m-add-recipe .ingridients .col-group .btn-add-to-group {
-    margin-top: 6px;
-    display: block; }
-    .m-add-recipe .ingridients .col-group .btn-add-to-group::before {
-      content: "\e9b2";
-      font-family: 'makro-icons';
-      margin-right: 6px; }
-    .m-add-recipe .ingridients .col-group .btn-add-to-group:focus, .m-add-recipe .ingridients .col-group .btn-add-to-group:hover {
-      text-decoration: none;
-      color: #9898a0; }
+  .m-add-recipe .ingridients .col-group {
+    position: relative; }
+    @media (min-width: 768px) {
+      .m-add-recipe .ingridients .col-group {
+        width: 140px; } }
+    .m-add-recipe .ingridients .col-group .btn-add-to-group {
+      margin-top: 6px;
+      display: block; }
+      .m-add-recipe .ingridients .col-group .btn-add-to-group::before {
+        content: "\e9b2";
+        font-family: 'makro-icons';
+        margin-right: 6px; }
+      .m-add-recipe .ingridients .col-group .btn-add-to-group:focus, .m-add-recipe .ingridients .col-group .btn-add-to-group:hover {
+        text-decoration: none;
+        color: #9898a0; }
   @media (min-width: 768px) {
     .m-add-recipe .ingridients .col-order {
       width: 25px; } }

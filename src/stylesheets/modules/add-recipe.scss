@@ -340,14 +340,18 @@
             padding: 10px 0 30px;
             margin-bottom: 20px;
             border-bottom: 1px solid $color-pale-gray;
-            overflow: hidden;
+            overflow: visible;
             position: relative;
+
+            @media(max-width: $screen-xs-max) {
+                overflow: hidden;
+            }
 
             @media(min-width: $screen-sm) {
                 margin-bottom: 0;
                 padding: 10px 0;
                 border-bottom: none;
-                overflow: auto;
+                overflow: visible;
             }
 
             &.ui-sortable-helper {
@@ -357,127 +361,6 @@
             &__name,
             &__group {
                 position: relative;
-            }
-
-            &__autocomplete {
-                position: absolute;
-                top: 68px;
-                background: $color-white;
-                border: 1px solid $color-cool-gray;
-                width: 100%;
-                z-index: 1;
-
-                @media(min-width: $screen-sm) {
-                    width: 435px;
-                    top: 39px;
-                }
-
-                &-list {
-                    padding: 0 26px;
-                    max-height: 160px;
-                    overflow: scroll;
-                }
-
-                &-item {
-                    line-height: 40px;
-                }
-
-                &-match {
-                    color: $color-black;
-                    font-weight: bold;
-                }
-
-                &-finding {
-                    text-decoration: none;
-                    color: $color-cool-gray;
-
-                    &:focus,
-                    &:hover {
-                        color: $color-black;
-                    }
-                }
-
-                &-btn-add {
-                    display: block;
-                    background: $color-black;
-                    color: $color-white;
-                    padding: 6px 0;
-                    text-align: center;
-                    text-decoration: none;
-                    transition: all .2s;
-
-                    span {
-                        position: relative;
-                        padding-left: 16px;
-
-                        &::before {
-                            content: "\e996";
-                            font-family: 'makro-icons';
-                            position: absolute;
-                            top: -5px;
-                            left: 0;
-                        }
-                    }
-
-                    &:focus,
-                    &:hover {
-                        background: $color-cool-gray;
-                    }
-                }
-
-                &-content {
-                    padding: 25px 13px;
-                }
-
-                .hidden {
-                    display: none;
-                }
-
-                &--group {
-                    width: 280px;
-                    top: 45px;
-                    left: -20px;
-
-                    &::before {
-                        content: '';
-                        height: 10px;
-                        width: 10px;
-                        background: $color-white;
-                        border-top: 1px solid $color-cool-gray;
-                        border-right: 1px solid $color-cool-gray;
-                        transform: rotate(-45deg);
-                        position: absolute;
-                        top: -6px;
-                        left: 25px;
-                        z-index: 2;
-                    }
-
-                    .ingridient__autocomplete-list {
-                        max-height: 160px;
-                        overflow: scroll;
-                        padding: 0;
-                        margin-top: 10px;
-                    }
-
-                    .ingridient__autocomplete-item {
-                        border-bottom: 1px solid $color-pale-gray;
-                        position: relative;
-                    }
-
-                    .ingridient__autocomplete-count {
-                        background: $color-pale-gray;
-                        color: $color-cool-gray;
-                        text-align: center;
-                        border-radius: 50%;
-                        width: 25px;
-                        height: 25px;
-                        display: block;
-                        position: absolute;
-                        right: 0;
-                        top: 6px;
-                        line-height: 25px;
-                    }
-                }
             }
 
             &__btn-more {
@@ -554,6 +437,8 @@
 
         }
         .col-group {
+            position: relative;
+
             @media(min-width: $screen-sm) {
                 width: 140px;
             }
