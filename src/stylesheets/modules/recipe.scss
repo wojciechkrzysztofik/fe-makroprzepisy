@@ -90,6 +90,19 @@
         }
     }
 
+    &__summary {
+        &-title {
+            color: $color-cool-gray;
+        }
+
+        &-list {
+            &-item {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+
     &__tags {
         @media(min-width: $screen-sm) {
             margin-left: 10px;

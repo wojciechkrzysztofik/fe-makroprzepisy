@@ -171,29 +171,31 @@
                         .photo__wrapper {
                             position: relative;
 
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: rgba(0, 0, 0, .5);
-                            }
+                            &--has-zoom {
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, .5);
+                                }
 
-                            &::after {
-                                content: "\e9c9";
-                                font-family: 'makro-icons';
-                                color: $color-white;
-                                text-align: center;
-                                position: absolute;
-                                top: 0;
-                                bottom: 0;
-                                left: 0;
-                                right: 0;
-                                font-size: 20px;
-                                margin: auto;
-                                height: 30px;
+                                &::after {
+                                    content: "\e9c9";
+                                    font-family: 'makro-icons';
+                                    color: $color-white;
+                                    text-align: center;
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    font-size: 20px;
+                                    margin: auto;
+                                    height: 30px;
+                                }
                             }
                         }
                     }
@@ -615,7 +617,6 @@
 
     .new-tag {
         width: 100%;
-        margin-bottom: 10px;
 
         @media(min-width: $screen-sm) {
             width: 550px;
@@ -624,6 +625,10 @@
 
     .m-tags {
         padding: 0;
+
+        &__list {
+            margin-top: 10px;
+        }
     }
 
     .tag-wrapper {

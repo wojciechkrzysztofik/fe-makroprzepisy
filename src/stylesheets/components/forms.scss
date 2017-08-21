@@ -25,3 +25,20 @@ textarea {
         border-color: $color-pale-gray;
     }
 }
+
+.has-error {
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+        border-color: $color-red;
+    }
+
+    .form-error {
+        font-size: $base-font-size - 2;
+        color: $color-red;
+        line-height: 2;
+        display: block;
+    }
+}
