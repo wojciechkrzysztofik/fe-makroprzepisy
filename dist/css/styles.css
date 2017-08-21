@@ -7672,14 +7672,20 @@ textarea {
   .m-add-recipe__content {
     margin-top: 60px; }
   .m-add-recipe .first-photo {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     background-color: #f2f2f5;
     border: 1px dashed #9898a0;
     width: 260px;
     height: 260px;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
+    .m-add-recipe .first-photo__image {
+      display: block;
+      width: 100%; }
+    .m-add-recipe .first-photo__form {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0; }
     .m-add-recipe .first-photo--uploaded {
       border: none;
       float: left;
