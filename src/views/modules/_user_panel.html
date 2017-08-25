@@ -1,84 +1,85 @@
 <article class="m-user-panel">
 
     <div class="container">
-        <h1 class="m-user-panel__title">Edytuj profil</h1>
+        <h1 class="page-title">Edytuj profil</h1>
 
         <div class="row">
             <div class="col-md-3">
-                <img src="http://via.placeholder.com/263x263" alt="Zdjęcie profilowe">
+                <img src="http://via.placeholder.com/263x263" alt="Zdjęcie profilowe" class="m-user-panel__avatar-img">
                 <form action="" method="post">
-                    <a href="" class="m-user-panel__change-photo"><i class="icon icon-camera"></i> Zmień zdjęcie</a>
+                    <input type="file" name="avatar" id="avatar" class="m-user-panel__avatar">
+                    <label class="m-user-panel__change-photo" for="avatar"><i class="icon icon-camera"></i> Zmień zdjęcie</label>
                     <a href="" class="m-user-panel__remove-photo"><i class="icon icon-trash"></i> Usuń</a>
                 </form>
             </div>
             <div class="col-md-6">
-                <form action="post">
+                <form class="m-user-panel__form" action="post">
                     <div class="input-wrapper">
-                        <label for="username">Nazwa użytkownika</label>
-                        <input type="text" name="username" id="username" value="Stefan">
+                        <label for="username" class="input-wrapper__label">Nazwa użytkownika</label>
+                        <input type="text" class="input-wrapper__input" name="username" id="username" value="Stefan">
                     </div>
                     <div class="input-wrapper">
-                        <label for="email">Adres e-mail</label>
-                        <input type="text" name="email" id="email" value="stefan@gmail.com">
+                        <label for="email" class="input-wrapper__label">Adres e-mail</label>
+                        <input type="text" class="input-wrapper__input" name="email" id="email" value="stefan@gmail.com">
                     </div>
                     <div class="input-wrapper">
-                        <label for="current-password">Obecne hasło</label>
-                        <input type="text" name="current-password" id="current-password">
+                        <label for="current-password" class="input-wrapper__label">Obecne hasło</label>
+                        <input type="text" class="input-wrapper__input" name="current-password" id="current-password">
                     </div>
                     <div class="input-wrapper">
-                        <label for="new-password">Nowe hasło</label>
-                        <input type="text" name="new-password" id="new-password">
+                        <label for="new-password" class="input-wrapper__label">Nowe hasło</label>
+                        <input type="text" class="input-wrapper__input" name="new-password" id="new-password">
                     </div>
                     <div class="input-wrapper">
-                        <label for="repeat-password">Powtórz hasło</label>
-                        <input type="text" name="repeat-password" id="repeat-password">
+                        <label for="repeat-password" class="input-wrapper__label">Powtórz hasło</label>
+                        <input type="text" class="input-wrapper__input" name="repeat-password" id="repeat-password">
                     </div>
 
-                    <button class="m-user-panel__submit">Zapisz zmiany</button>
+                    <button class="btn btn--inverse btn--md m-user-panel__submit">Zapisz zmiany</button>
                 </form>
             </div>
             <div class="col-md-3">
-                <section>
-                    <div class="m-user-panel__heading m-user-panel__heading--recipes"><span class="m-user-panel__heading-number">21</span> Recipes added</div>
+                <section class="m-user-panel__recipes">
+                    <div class="m-user-panel__heading m-user-panel__heading--recipes"><span class="m-user-panel__heading-number">21</span><span class="m-user-panel__heading-title">Recipes<br>added</span></div>
                     <ul class="m-user-panel__list">
                         <li class="m-user-panel__list-item row">
-                            <div class="col-md-5">
+                            <div class="col-xs-5">
                                 <img src="http://via.placeholder.com/100x57" alt="Bułeczki drożdżowe  z rodzynkami i żurawiną">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-xs-7">
                                 <p class="m-user-panel__list-item-title">Bułeczki drożdżowe  z rodzynkami i żurawiną</p>
                             </div>
                         </li>
                         <li class="m-user-panel__list-item row">
-                            <div class="col-md-5">
+                            <div class="col-xs-5">
                                 <img src="http://via.placeholder.com/100x57" alt="Bułeczki drożdżowe  z rodzynkami i żurawiną">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-xs-7">
                                 <p class="m-user-panel__list-item-title">Bułeczki drożdżowe  z rodzynkami i żurawiną</p>
                             </div>
                         </li>
                     </ul>
                 </section>
-                <section>
-                    <div class="m-user-panel__heading m-user-panel__heading--ingridients"><span class="m-user-panel__heading-number">21</span> Recipes added</div>
+                <section class="m-user-panel__ingridients">
+                    <div class="m-user-panel__heading m-user-panel__heading--ingridients"><span class="m-user-panel__heading-number">21</span><span class="m-user-panel__heading-title">Ingridients<br>added</span></div>
                 </section>
-                <section>
-                    <div class="m-user-panel__heading m-user-panel__heading--recipes"><span class="m-user-panel__heading-number">21</span> Favorites recipes</div>
+                <section class="m-user-panel__favorites">
+                    <div class="m-user-panel__heading m-user-panel__heading--favorites"><span class="m-user-panel__heading-number">21</span><span class="m-user-panel__heading-title">Favorites recipes</span></div>
                     <ul class="m-user-panel__list">
                         <li class="m-user-panel__list-item row">
-                            <div class="col-md-5">
+                            <div class="col-xs-5">
                                 <img src="http://via.placeholder.com/100x57" alt="Wege in fall">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-xs-7">
                                 <p class="m-user-panel__list-item-title">Wege in fall</p>
                                 <p class="m-user-panel__list-item-description">34 recipes</p>
                             </div>
                         </li>
                         <li class="m-user-panel__list-item row">
-                            <div class="col-md-5">
+                            <div class="col-xs-5">
                                 <img src="http://via.placeholder.com/100x57" alt="Wege in fall">
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-xs-7">
                                 <p class="m-user-panel__list-item-title">Wege in fall</p>
                                 <p class="m-user-panel__list-item-description">34 recipes</p>
                             </div>

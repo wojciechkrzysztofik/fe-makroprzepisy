@@ -6842,6 +6842,8 @@ button {
   .btn--inverse {
     background: #000;
     color: #fff; }
+  .btn--md {
+    padding: 9px 15px 11px; }
 
 .add-to-favorites {
   background: transparent;
@@ -7084,6 +7086,14 @@ textarea {
       right: 0;
       top: 6px;
       line-height: 25px; }
+
+.page-title {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .page-title {
+      margin-bottom: 30px; } }
 
 .m-navbar {
   position: fixed;
@@ -8359,6 +8369,95 @@ textarea {
     .dropdown-menu__btn-close:focus, .dropdown-menu__btn-close:hover {
       text-decoration: none;
       color: #9898a0; }
+
+.m-user-panel {
+  padding: 80px 0; }
+  .m-user-panel__avatar {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; }
+    .m-user-panel__avatar-img {
+      margin-bottom: 20px;
+      display: block; }
+      @media (max-width: 767px) {
+        .m-user-panel__avatar-img {
+          width: 100%; } }
+  @media (max-width: 991px) {
+    .m-user-panel__form {
+      margin: 30px 0; } }
+  .m-user-panel__change-photo {
+    font-weight: normal;
+    display: block;
+    cursor: pointer; }
+  .m-user-panel__change-photo, .m-user-panel__remove-photo {
+    transition: all .2s; }
+    .m-user-panel__change-photo:focus, .m-user-panel__change-photo:hover, .m-user-panel__remove-photo:focus, .m-user-panel__remove-photo:hover {
+      text-decoration: none;
+      color: #9898a0; }
+    .m-user-panel__change-photo .icon, .m-user-panel__remove-photo .icon {
+      font-size: 1.1rem;
+      margin-right: 3px; }
+  .m-user-panel .input-wrapper__label {
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+    font-family: 'mulisemibold'; }
+  .m-user-panel .input-wrapper__input {
+    margin: 0 0 25px; }
+  .m-user-panel__submit {
+    text-transform: none; }
+  .m-user-panel__heading {
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 12px;
+    height: 80px;
+    line-height: 60px;
+    padding: 0 16px;
+    position: relative; }
+    .m-user-panel__heading:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: .4;
+      width: 59px;
+      height: 59px; }
+    .m-user-panel__heading--recipes:after {
+      background: url("../images/user-panel/recipes.svg") no-repeat; }
+    .m-user-panel__heading--ingridients:after {
+      background: url("../images/user-panel/ingridients.svg") no-repeat; }
+    .m-user-panel__heading--favorites:after {
+      background: url("../images/user-panel/favorites.svg") no-repeat; }
+    .m-user-panel__heading-number {
+      font-size: 40px;
+      font-family: 'mulibold';
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 10px; }
+    .m-user-panel__heading-title {
+      margin: 14px 0 0 10px;
+      line-height: 18px;
+      display: inline-block;
+      vertical-align: middle; }
+  .m-user-panel__list-item {
+    margin-bottom: 12px;
+    font-family: 'mulisemibold'; }
+    .m-user-panel__list-item-title {
+      line-height: 18px;
+      margin: 0; }
+    .m-user-panel__list-item-description {
+      font-size: 12px; }
+  .m-user-panel__favorites .m-user-panel__list-item-title {
+    margin-top: 10px; }
+  .m-user-panel__recipes .col-xs-5, .m-user-panel__ingridientes .col-xs-5, .m-user-panel__favorites .col-xs-5 {
+    padding-right: 0; }
+  .m-user-panel__recipes img, .m-user-panel__ingridientes img, .m-user-panel__favorites img {
+    width: 100%; }
+
+.m-contact {
+  padding: 80px 0; }
 
 .has-popup::before {
   content: '';

@@ -1,0 +1,9 @@
+.page-title {
+    font-size: $font-size-md;
+    line-height: 28px;
+    margin-bottom: 20px;
+
+    @media( min-width: $screen-sm) {
+        margin-bottom: 30px;
+    }
+}
