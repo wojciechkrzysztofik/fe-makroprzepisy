@@ -1,3 +1,57 @@
 .m-contact {
     padding: 80px 0;
+
+    .page-title {
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+
+        a {
+            font-weight: bold;
+            text-decoration: underline;
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 40px;
+        margin: 30px auto;
+    }
+
+    &__separator {
+        display: block;
+        color: $color-cool-gray;
+        margin: 30px 0;
+    }
+
+    &__form {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        &-row {
+            margin-bottom: 20px;
+        }
+
+        &-textarea {
+            height: 250px;
+            resize: none;
+        }
+    }
+
+    &__user-email {
+        font-weight: bold;
+    }
+
+    &__img {
+        display: block;
+        width: 50px;
+        margin: 30px auto;
+    }
 }

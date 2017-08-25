@@ -1,5 +1,33 @@
 <article class="m-contact">
     <div class="container">
-        kontakt
+        <h2 class="page-title">Skontaktuj się z nami</h2>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <p class="m-contact__text">Masz pytania, uwagi, chciał byś z nami współpracować? Skontaktuj się z nami pod adresem <a href="mailto:kontakt@makroprzepisy.pl">kontakt@makroprzepisy.pl</a><span class="m-contact__separator">lub</span>skorzystaj z formularza ponizej.</p>
+            </div>
+        </div>
+
+        <div class="m-contact__form-wrapper">
+            <form class="m-contact__form col-sm-6 col-sm-offset-3">
+                <div class="m-contact__form-row has-error">
+                    <label for="subject" class="m-contact__form-label">Temat</label>
+                    <input type="text" class="m-contact__form-input" name="subject" id="subject" placeholder="np. Dziękuję za stworzenie tego serwisu">
+                    <span class="form-error">Pole jest obowiązkowe.</span>
+                </div>
+
+                <div class="m-contact__form-row">
+                    <label for="email" class="m-contact__form-label">Adres e-mail</label>
+                    <input type="text" class="m-contact__form-input" name="email" id="email">
+                </div>
+
+                <div class="m-contact__form-row">
+                    <label for="message" class="m-contact__form-label">Wiadomość</label>
+                    <textarea class="m-contact__form-textarea" name="message" id="message"></textarea>
+                </div>
+
+                <button class="btn btn--inverse btn--md">Wyślij wiadomość</button>
+            </form>
+        </div>
     </div>
 </article>
