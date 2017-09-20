@@ -3827,12 +3827,14 @@ input[type="button"].btn-block {
   .hidden-print {
     display: none !important; } }
 
-html {
+html,
+body {
   color: #000;
   font-size: 14px;
   font-family: muliregular;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  font-family: 'muliregular'; }
 
 ul, li {
   list-style-type: none;
@@ -7083,18 +7085,17 @@ textarea {
       top: 39px; } }
   .ingridient__autocomplete-list {
     padding: 0 26px;
-    max-height: 160px;
-    overflow: scroll; }
+    max-height: 160px; }
   .ingridient__autocomplete-item {
     line-height: 40px; }
   .ingridient__autocomplete-match {
     color: #000;
     font-weight: bold; }
-  .ingridient__autocomplete-finding {
+  .ingridient__autocomplete .ingridient__autocomplete-finding {
     text-decoration: none;
     color: #9898a0; }
-    .ingridient__autocomplete-finding:focus, .ingridient__autocomplete-finding:hover {
-      color: #000; }
+  .ingridient__autocomplete a.ingridient__autocomplete-finding:focus, .ingridient__autocomplete a.ingridient__autocomplete-finding:hover {
+    color: #000; }
   .ingridient__autocomplete-btn-add {
     display: block;
     background: #000;
@@ -7110,10 +7111,12 @@ textarea {
         content: "\e996";
         font-family: 'makro-icons';
         position: absolute;
-        top: -5px;
+        top: -3px;
         left: 0; }
     .ingridient__autocomplete-btn-add:focus, .ingridient__autocomplete-btn-add:hover {
-      background: #9898a0; }
+      background: #9898a0;
+      color: #fff;
+      text-decoration: none; }
   .ingridient__autocomplete-content {
     padding: 25px 13px; }
   .ingridient__autocomplete .hidden {
@@ -7136,7 +7139,6 @@ textarea {
       z-index: 2; }
     .ingridient__autocomplete--group .ingridient__autocomplete-list {
       max-height: 160px;
-      overflow: scroll;
       padding: 0;
       margin-top: 10px; }
     .ingridient__autocomplete--group .ingridient__autocomplete-item {
@@ -7154,6 +7156,27 @@ textarea {
       right: 0;
       top: 6px;
       line-height: 25px; }
+    .ingridient__autocomplete--group .ingridient__autocomplete-order-group {
+      float: right;
+      margin-top: 7px; }
+    .ingridient__autocomplete--group .ingridient__autocomplete-order {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      display: block;
+      float: left;
+      margin-right: 5px;
+      line-height: 25px;
+      text-decoration: none;
+      transition: all .2s; }
+      .ingridient__autocomplete--group .ingridient__autocomplete-order:focus, .ingridient__autocomplete--group .ingridient__autocomplete-order:hover {
+        background: #9898a0;
+        color: #fff; }
+    .ingridient__autocomplete--group .ingridient__autocomplete-close {
+      line-height: 22px; }
 
 .page-title {
   font-size: 20px;

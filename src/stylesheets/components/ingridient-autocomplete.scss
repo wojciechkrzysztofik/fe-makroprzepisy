@@ -20,7 +20,6 @@
     &-list {
         padding: 0 26px;
         max-height: 160px;
-        overflow: scroll;
     }
 
     &-item {
@@ -32,10 +31,12 @@
         font-weight: bold;
     }
 
-    &-finding {
+    .ingridient__autocomplete-finding {
         text-decoration: none;
         color: $color-cool-gray;
+    }
 
+    a.ingridient__autocomplete-finding {
         &:focus,
         &:hover {
             color: $color-black;
@@ -59,7 +60,7 @@
                 content: "\e996";
                 font-family: 'makro-icons';
                 position: absolute;
-                top: -5px;
+                top: -3px;
                 left: 0;
             }
         }
@@ -67,6 +68,8 @@
         &:focus,
         &:hover {
             background: $color-cool-gray;
+            color: $color-white;
+            text-decoration: none;
         }
     }
 
@@ -99,7 +102,6 @@
 
         .ingridient__autocomplete-list {
             max-height: 160px;
-            overflow: scroll;
             padding: 0;
             margin-top: 10px;
         }
@@ -121,6 +123,36 @@
             right: 0;
             top: 6px;
             line-height: 25px;
+        }
+
+        .ingridient__autocomplete-order-group {
+            float: right;
+            margin-top: 7px;
+        }
+
+        .ingridient__autocomplete-order {
+            background: $color-black;
+            color: $color-white;
+            text-align: center;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: block;
+            float: left;
+            margin-right: 5px;
+            line-height: 25px;
+            text-decoration: none;
+            transition: all .2s;
+
+            &:focus,
+            &:hover {
+                background: $color-cool-gray;
+                color: $color-white;
+            }
+        }
+
+        .ingridient__autocomplete-close {
+            line-height: 22px;
         }
     }
 }

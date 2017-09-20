@@ -1,9 +1,11 @@
-html {
+html,
+body {
     color: $color-text;
     font-size: $base-font-size;
     font-family: $base-font-family;
     line-height: $base-line-height;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
+    font-family: 'muliregular';
 }
 
 ul, li {
