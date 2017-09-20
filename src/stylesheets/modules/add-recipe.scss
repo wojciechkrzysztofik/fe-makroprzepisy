@@ -83,6 +83,7 @@
             border: none;
             float: left;
             margin: 0 10px 20px 0;
+            height: auto;
 
             @media(min-width: $screen-xs) {
                 float: none;

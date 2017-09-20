@@ -1,0 +1,45 @@
+.m-error {
+    padding: 80px 0;
+    text-align: center;
+    font-family: 'muliregular';
+
+    .page-title {
+        text-align: center;
+        font-family: 'mulibold';
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        a {
+            font-weight: bold;
+            text-decoration: underline;
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__heading-image {
+        width: 196px;
+        display: block;
+        margin: 100px auto 40px;
+    }
+
+    &__link {
+        font-size: 12px;
+        border-bottom: 1px solid;
+        padding: 0 4px 2px;
+        transition: all .2s;
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            border-color: $color-white;
+        }
+    }
+}
