@@ -7579,16 +7579,12 @@ textarea {
         height: 80px;
         width: 65px; }
         .m-recipes .recipe .overlay__macro--carbo {
-          left: -100px;
-          transition: left .2s; }
+          left: 10px; }
         .m-recipes .recipe .overlay__macro--protein {
           left: 0;
-          right: 0;
-          top: -100px;
-          transition: top .2s; }
+          right: 0; }
         .m-recipes .recipe .overlay__macro--fat {
-          right: -100px;
-          transition: right .2s; }
+          right: 10px; }
       .m-recipes .recipe .overlay__name {
         display: block;
         text-align: center;
@@ -7597,12 +7593,6 @@ textarea {
         margin-top: 5px; }
     .m-recipes .recipe__link:focus .overlay, .m-recipes .recipe__link:hover .overlay {
       opacity: 1; }
-      .m-recipes .recipe__link:focus .overlay__macro--carbo, .m-recipes .recipe__link:hover .overlay__macro--carbo {
-        left: 10px; }
-      .m-recipes .recipe__link:focus .overlay__macro--protein, .m-recipes .recipe__link:hover .overlay__macro--protein {
-        top: 0; }
-      .m-recipes .recipe__link:focus .overlay__macro--fat, .m-recipes .recipe__link:hover .overlay__macro--fat {
-        right: 10px; }
   .m-recipes__btn-load-more {
     border: none;
     background: #000;

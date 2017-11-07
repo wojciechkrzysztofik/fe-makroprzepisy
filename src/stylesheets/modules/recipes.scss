@@ -65,20 +65,16 @@
                 width: 65px;
 
                 &--carbo {
-                    left: -100px;
-                    transition: left .2s;
+                    left: 10px;
                 }
 
                 &--protein {
                     left: 0;
                     right: 0;
-                    top: -100px;
-                    transition: top .2s;
                 }
 
                 &--fat {
-                    right: -100px;
-                    transition: right .2s;
+                    right: 10px;
                 }
             }
 
@@ -97,18 +93,6 @@
             &:hover {
                 .overlay {
                     opacity: 1;
-
-                    &__macro--carbo {
-                        left: 10px;
-                    }
-
-                    &__macro--protein {
-                        top: 0;
-                    }
-
-                    &__macro--fat {
-                        right: 10px;
-                    }
                 }
             }
         }
