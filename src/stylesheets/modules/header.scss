@@ -30,6 +30,10 @@
         @media(min-width: $screen-md) {
             left: -370px;
         }
+
+        @media(min-width: $screen-lg) {
+            left: -100px;
+        }
     }
 
     @media(min-width: $screen-md) {
@@ -39,9 +43,21 @@
             height: calc(100% - 52px);
             position: absolute;
             bottom: 0;
-            right: -250px;
+            right: -370px;
             background: url('../images/header/bg-right.jpg') no-repeat;
             z-index: 0;
+        }
+    }
+
+    @media(min-width: 1280px) {
+        &::after {
+            right: -80px;
+        }
+    }
+
+    @media(min-width: $screen-lg) {
+        &::after {
+            right: -120px;
         }
     }
 
