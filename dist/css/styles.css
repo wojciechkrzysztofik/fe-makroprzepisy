@@ -7197,6 +7197,8 @@ textarea {
   @media (min-width: 768px) {
     .m-navbar {
       height: auto; } }
+  .m-navbar > .container {
+    position: relative; }
   .m-navbar.open {
     height: 100%; }
     .m-navbar.open .menu {
