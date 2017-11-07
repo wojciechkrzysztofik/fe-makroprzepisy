@@ -7723,7 +7723,7 @@ textarea {
       float: left;
       line-height: 75px; }
   .m-recipe .portions {
-    text-align: center; }
+    text-align: left; }
   .m-recipe .photos__image {
     width: 100%;
     transition: transform .2s; }
