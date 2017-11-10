@@ -7085,7 +7085,8 @@ textarea {
       top: 39px; } }
   .ingridient__autocomplete-list {
     padding: 0 26px;
-    max-height: 160px; }
+    max-height: 160px;
+    overflow-y: scroll; }
   .ingridient__autocomplete-item {
     line-height: 40px; }
   .ingridient__autocomplete-match {

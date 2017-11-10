@@ -20,6 +20,7 @@
     &-list {
         padding: 0 26px;
         max-height: 160px;
+        overflow-y: scroll;
     }
 
     &-item {
