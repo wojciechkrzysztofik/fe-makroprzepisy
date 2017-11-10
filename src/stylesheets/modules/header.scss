@@ -23,15 +23,15 @@
         height: calc(100% - 52px);
         position: absolute;
         bottom: 0;
-        left: -100px;
+        left: -250px;
         background: url('../images/header/bg-left.jpg') no-repeat;
         z-index: 0;
 
-        @media(min-width: $screen-md) {
+        @media(min-width: 1440px) {
             left: -370px;
         }
 
-        @media(min-width: $screen-lg) {
+        @media(min-width: 1440px) {
             left: -100px;
         }
     }
@@ -49,13 +49,13 @@
         }
     }
 
-    @media(min-width: 1280px) {
+    @media(min-width: $screen-lg) {
         &::after {
-            right: -80px;
+            right: -270px;
         }
     }
 
-    @media(min-width: $screen-lg) {
+    @media(min-width: 1440px) {
         &::after {
             right: -120px;
         }
