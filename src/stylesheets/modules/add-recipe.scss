@@ -564,7 +564,11 @@
         }
 
         .col-nr {
-            width: 30px;
+            width: 35px;
+
+            @media (min-width: 768px) {
+                padding-left: 0;
+            }
 
             .order-number {
                 font-size: $font-size-sm + 4;

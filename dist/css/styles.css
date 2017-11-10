@@ -8109,7 +8109,10 @@ textarea {
   .m-add-recipe .recipe .col {
     float: left; }
   .m-add-recipe .recipe .col-nr {
-    width: 30px; }
+    width: 35px; }
+    @media (min-width: 768px) {
+      .m-add-recipe .recipe .col-nr {
+        padding-left: 0; } }
     .m-add-recipe .recipe .col-nr .order-number {
       font-size: 20px;
       font-weight: bold;
