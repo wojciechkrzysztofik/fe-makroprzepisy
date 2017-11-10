@@ -128,6 +128,11 @@
             @media(min-width: $screen-sm) {
                 width: 366px;
             }
+
+            @media(max-width: $screen-xs-max) {
+                display: block;
+                border-radius: 4px;
+            }
         }
 
         &__btn-submit {
@@ -150,6 +155,8 @@
 
             @media(min-width: $screen-sm) {
                 display: block;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
             }
         }
     }

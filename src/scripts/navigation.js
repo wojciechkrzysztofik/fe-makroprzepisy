@@ -9,19 +9,7 @@ const navigationSetup = function(navigationElement, toggleBtn, desktopDropdown, 
     let init = function() {
         $toggleBtn.addEventListener('click', toggleMenu);
         $desktopDropdownBtn.addEventListener('click', toggleDesktopDropdown);
-        //$desktopDropdownBtn.addEventListener('mouseover', showDesktopDropdown);
-        //$desktopDropdownBtn.addEventListener('mouseout', hideDesktopDropdown);
     }
-
-    // let showDesktopDropdown = function() {
-    //     $desktopDropdownBtn.classList.add('open');
-    //     $desktopDropdown.classList.add('open');
-    // }
-    //
-    // let hideDesktopDropdown = function() {
-    //     $desktopDropdownBtn.classList.remove('open');
-    //     $desktopDropdown.classList.remove('open');
-    // }
 
     let toggleMenu = function() {
         if($navigation.classList.contains('open')) {

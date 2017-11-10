@@ -2,22 +2,19 @@
     padding-bottom: 80px;
     position: relative;
 
-    &__list {
-      column-count: 2;
-      column-gap: 30px;
-
-      @media(min-width: $screen-sm) {
-          column-count: 3;
-      }
-
-      @media(min-width: $screen-md) {
-          column-count: 4;
-      }
-    }
-
     .recipe {
-        break-inside: avoid;
-        margin-bottom: 40px;
+        width: 100%;
+        float: left;
+        margin: 0 0 40px;
+
+        @media(min-width: $screen-sm) {
+            width: 30%;
+            margin: 0 12px 40px;
+        }
+
+        @media(min-width: 1280px) {
+            width: 22%;
+        }
 
         &__image-wrapper {
             position: relative;
