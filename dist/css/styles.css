@@ -7593,7 +7593,7 @@ textarea {
         font-family: mulisemibold;
         line-height: 1.5;
         margin-top: 5px; }
-    .m-recipes .recipe__link:focus .overlay, .m-recipes .recipe__link:hover .overlay {
+    .m-recipes .recipe__link:hover .overlay {
       opacity: 1; }
   .m-recipes__btn-load-more {
     border: none;
