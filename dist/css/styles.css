@@ -3036,6 +3036,91 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+  .alert h4 {
+    margin-top: 0;
+    color: inherit; }
+  .alert .alert-link {
+    font-weight: bold; }
+  .alert > p,
+  .alert > ul {
+    margin-bottom: 0; }
+  .alert > p + p {
+    margin-top: 5px; }
+
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px; }
+  .alert-dismissable .close,
+  .alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit; }
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d; }
+  .alert-success hr {
+    border-top-color: #c9e2b3; }
+  .alert-success .alert-link {
+    color: #2b542c; }
+
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  .alert-info hr {
+    border-top-color: #a6e1ec; }
+  .alert-info .alert-link {
+    color: #245269; }
+
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b; }
+  .alert-warning hr {
+    border-top-color: #f7e1b5; }
+  .alert-warning .alert-link {
+    color: #66512c; }
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  .alert-danger hr {
+    border-top-color: #e4b9c0; }
+  .alert-danger .alert-link {
+    color: #843534; }
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  filter: alpha(opacity=20); }
+  .close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
 .modal-open {
   overflow: hidden; }
 
@@ -6879,7 +6964,7 @@ button {
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    line-height: 22px;
+    line-height: 20px;
     text-align: center;
     display: block;
     float: left; }
@@ -7573,21 +7658,22 @@ textarea {
       .m-recipes .recipe .overlay .icon {
         display: block;
         text-align: center;
-        font-size: 2.4rem; }
+        font-size: 2.4rem;
+        max-width: 50px; }
       .m-recipes .recipe .overlay__macro {
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
-        height: 80px;
+        height: 100px;
         width: 65px; }
         .m-recipes .recipe .overlay__macro--carbo {
-          left: 10px; }
+          left: 15px; }
         .m-recipes .recipe .overlay__macro--protein {
           left: 0;
           right: 0; }
         .m-recipes .recipe .overlay__macro--fat {
-          right: 10px; }
+          right: 15px; }
       .m-recipes .recipe .overlay__name {
         display: block;
         text-align: center;
