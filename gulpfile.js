@@ -12,6 +12,8 @@ var gulpCopy = require('gulp-copy');
 var clean = require('gulp-clean');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
+var dirSync = require('gulp-directory-sync');
+var del = require('del');
 
 // Run webserver
 gulp.task('webserver', function() {
@@ -32,7 +34,7 @@ gulp.task('html', function () {
 
 // Compile CSS
 gulp.task('css', function () {
-  return gulp.src('src/stylesheets/styles.scss')
+  return gulp.src('src/scss/styles.scss')
     .pipe( sourcemaps.init() )
     .pipe(sass.sync().on('error', sass.logError))
       .pipe(autoprefixer({
@@ -71,31 +73,40 @@ gulp.task('scripts', function () {
       .pipe(connect.reload());
 });
 
+// Clean images and fonts in Application.Web
 gulp.task('clean', function () {
-    return gulp.src('assets/fonts', {read: false})
-        .pipe(clean());
+  del(['dist/images',
+       'dist/fonts',
+       'dist/scripts',
+       'dist/css'
+      ], {force: true});
 });
 
-gulp.task('copy', function () {
-    gulp.src(['src/fonts/**/*'])
-        .pipe(gulp.dest('dist/fonts/'))
-    gulp.src(['src/images/**/*'])
-        .pipe(gulp.dest('dist/images/'));
+// Sync/copy font files between src and dist folders
+gulp.task('sync-fonts', function() {
+    return gulp.src('')
+        .pipe(dirSync('src/fonts', 'dist/fonts'));
+});
+
+// Sync/copy images between src and dist folders
+gulp.task('sync-images', function() {
+    return gulp.src('')
+        .pipe(dirSync('src/images', 'dist/images'));
 });
 
 gulp.task('build', function () {
-    gulp.start(['html', 'css', 'minify-css', 'scripts', 'copy']);
+    gulp.start(['clean', 'sync-fonts', 'sync-images', 'html', 'css', 'minify-css', 'scripts']);
 });
 
 // Watch changes
 gulp.task('watch', function () {
-    gulp.watch('src/stylesheets/**/*.scss', ['css']);
+    gulp.watch('src/scss/**/*.scss', ['css']);
     gulp.watch('src/scripts/**/*.js', ['scripts']);
     gulp.watch('src/views/**/*.html', ['html']);
-
-    return gulp.start(['webserver']);
+    gulp.watch('src/fonts/**/*', ['sync-fonts']);
+    gulp.watch('src/images/**/*', ['sync-images']);
 });
 
 gulp.task('default', function() {
-    gulp.start(['build', 'watch']);
+    gulp.start(['sync-fonts', 'sync-images', 'watch', 'webserver']);
 });
